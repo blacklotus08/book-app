@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "UvrHsfBmGnp7+oVQOiOO9l1A4fRfIxWaG6n+7lyim2BeXVqDlskurlzaqgpgfJysg4dnwiYUlooimAQL9+sYmQ==",
+  "success": true,
+  "projectFilePath": "D:\\Personal\\Applications\\book-app\\service\\LibraryAPI\\LibraryAPI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Blacklotus\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.4\\microsoft.aspnetcore.openapi.8.0.4.nupkg.sha512",
+    "C:\\Users\\Blacklotus\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\Blacklotus\\.nuget\\packages\\microsoft.openapi\\1.6.14\\microsoft.openapi.1.6.14.nupkg.sha512",
+    "C:\\Users\\Blacklotus\\.nuget\\packages\\swashbuckle.aspnetcore\\6.7.3\\swashbuckle.aspnetcore.6.7.3.nupkg.sha512",
+    "C:\\Users\\Blacklotus\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.7.3\\swashbuckle.aspnetcore.swagger.6.7.3.nupkg.sha512",
+    "C:\\Users\\Blacklotus\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.7.3\\swashbuckle.aspnetcore.swaggergen.6.7.3.nupkg.sha512",
+    "C:\\Users\\Blacklotus\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.7.3\\swashbuckle.aspnetcore.swaggerui.6.7.3.nupkg.sha512"
+  ],
+  "logs": []
+}
