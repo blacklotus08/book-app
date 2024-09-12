@@ -1,0 +1,14 @@
+{
+  "name": "@webapp/source",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {},
+  "private": true,
+  "dependencies": {
+    "empty": "0.10.1"
+  },
+  "devDependencies": {
+    "@nx/workspace": "19.7.2",
+    "nx": "19.7.2"
+  }
+}
