@@ -1,0 +1,122 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Personal\\Applications\\book-app\\service\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{493D6702-60D8-4DDD-A311-F67B5A634C03}|Library.Infrastructure\\Library.Infrastructure.csproj|d:\\personal\\applications\\book-app\\service\\library.infrastructure\\repository\\interfaces\\ibookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{493D6702-60D8-4DDD-A311-F67B5A634C03}|Library.Infrastructure\\Library.Infrastructure.csproj|solutionrelative:library.infrastructure\\repository\\interfaces\\ibookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{493D6702-60D8-4DDD-A311-F67B5A634C03}|Library.Infrastructure\\Library.Infrastructure.csproj|d:\\personal\\applications\\book-app\\service\\library.infrastructure\\repository\\bookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{493D6702-60D8-4DDD-A311-F67B5A634C03}|Library.Infrastructure\\Library.Infrastructure.csproj|solutionrelative:library.infrastructure\\repository\\bookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{493D6702-60D8-4DDD-A311-F67B5A634C03}|Library.Infrastructure\\Library.Infrastructure.csproj|d:\\personal\\applications\\book-app\\service\\library.infrastructure\\entities\\bookentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{493D6702-60D8-4DDD-A311-F67B5A634C03}|Library.Infrastructure\\Library.Infrastructure.csproj|solutionrelative:library.infrastructure\\entities\\bookentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{493D6702-60D8-4DDD-A311-F67B5A634C03}|Library.Infrastructure\\Library.Infrastructure.csproj|d:\\personal\\applications\\book-app\\service\\library.infrastructure\\classes\\defaultentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{493D6702-60D8-4DDD-A311-F67B5A634C03}|Library.Infrastructure\\Library.Infrastructure.csproj|solutionrelative:library.infrastructure\\classes\\defaultentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{493D6702-60D8-4DDD-A311-F67B5A634C03}|Library.Infrastructure\\Library.Infrastructure.csproj|d:\\personal\\applications\\book-app\\service\\library.infrastructure\\classes\\interfaces\\idefaultentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{493D6702-60D8-4DDD-A311-F67B5A634C03}|Library.Infrastructure\\Library.Infrastructure.csproj|solutionrelative:library.infrastructure\\classes\\interfaces\\idefaultentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{493D6702-60D8-4DDD-A311-F67B5A634C03}|Library.Infrastructure\\Library.Infrastructure.csproj|d:\\personal\\applications\\book-app\\service\\library.infrastructure\\infrastructureservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{493D6702-60D8-4DDD-A311-F67B5A634C03}|Library.Infrastructure\\Library.Infrastructure.csproj|solutionrelative:library.infrastructure\\infrastructureservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "InfrastructureService.cs",
+              "DocumentMoniker": "D:\\Personal\\Applications\\book-app\\service\\Library.Infrastructure\\InfrastructureService.cs",
+              "RelativeDocumentMoniker": "Library.Infrastructure\\InfrastructureService.cs",
+              "ToolTip": "D:\\Personal\\Applications\\book-app\\service\\Library.Infrastructure\\InfrastructureService.cs",
+              "RelativeToolTip": "Library.Infrastructure\\InfrastructureService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T15:51:11.255Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IDefaultEntity.cs",
+              "DocumentMoniker": "D:\\Personal\\Applications\\book-app\\service\\Library.Infrastructure\\Classes\\Interfaces\\IDefaultEntity.cs",
+              "RelativeDocumentMoniker": "Library.Infrastructure\\Classes\\Interfaces\\IDefaultEntity.cs",
+              "ToolTip": "D:\\Personal\\Applications\\book-app\\service\\Library.Infrastructure\\Classes\\Interfaces\\IDefaultEntity.cs",
+              "RelativeToolTip": "Library.Infrastructure\\Classes\\Interfaces\\IDefaultEntity.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T15:49:12.628Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DefaultEntity.cs",
+              "DocumentMoniker": "D:\\Personal\\Applications\\book-app\\service\\Library.Infrastructure\\Classes\\DefaultEntity.cs",
+              "RelativeDocumentMoniker": "Library.Infrastructure\\Classes\\DefaultEntity.cs",
+              "ToolTip": "D:\\Personal\\Applications\\book-app\\service\\Library.Infrastructure\\Classes\\DefaultEntity.cs",
+              "RelativeToolTip": "Library.Infrastructure\\Classes\\DefaultEntity.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T15:47:55.618Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BookEntity.cs",
+              "DocumentMoniker": "D:\\Personal\\Applications\\book-app\\service\\Library.Infrastructure\\Entities\\BookEntity.cs",
+              "RelativeDocumentMoniker": "Library.Infrastructure\\Entities\\BookEntity.cs",
+              "ToolTip": "D:\\Personal\\Applications\\book-app\\service\\Library.Infrastructure\\Entities\\BookEntity.cs",
+              "RelativeToolTip": "Library.Infrastructure\\Entities\\BookEntity.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAwAAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T15:30:30.664Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BookRepository.cs",
+              "DocumentMoniker": "D:\\Personal\\Applications\\book-app\\service\\Library.Infrastructure\\Repository\\BookRepository.cs",
+              "RelativeDocumentMoniker": "Library.Infrastructure\\Repository\\BookRepository.cs",
+              "ToolTip": "D:\\Personal\\Applications\\book-app\\service\\Library.Infrastructure\\Repository\\BookRepository.cs",
+              "RelativeToolTip": "Library.Infrastructure\\Repository\\BookRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAgAAABKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T15:28:23.697Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "IBookRepository.cs",
+              "DocumentMoniker": "D:\\Personal\\Applications\\book-app\\service\\Library.Infrastructure\\Repository\\Interfaces\\IBookRepository.cs",
+              "RelativeDocumentMoniker": "Library.Infrastructure\\Repository\\Interfaces\\IBookRepository.cs",
+              "ToolTip": "D:\\Personal\\Applications\\book-app\\service\\Library.Infrastructure\\Repository\\Interfaces\\IBookRepository.cs",
+              "RelativeToolTip": "Library.Infrastructure\\Repository\\Interfaces\\IBookRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T15:27:34.46Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
