@@ -30,3 +30,107 @@
 [NX Daemon Server] - 2024-09-13T13:35:15.250Z - Done responding to the client handleContextFileData
 [NX Daemon Server] - 2024-09-13T13:35:15.250Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 0. Response time: 1.
 [NX Daemon Server] - 2024-09-13T13:35:15.250Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-09-13T13:35:23.681Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-09-13T13:35:23.684Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 66 file(s) deleted
+[NX Daemon Server] - 2024-09-13T13:35:23.786Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-09-13T13:35:23.786Z - [REQUEST]: 
+[NX Daemon Server] - 2024-09-13T13:35:23.786Z - [REQUEST]: service/LibraryAPI/bin/Debug/net8.0/LibraryAPI.dll,service/LibraryAPI/appsettings.json,service/LibraryAPI/Library.Infrastracture,service/LibraryAPI/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll,service/LibraryAPI/obj/Debug/net8.0/LibraryAPI.assets.cache,service/LibraryAPI/bin/Debug/net8.0/appsettings.Development.json,service/LibraryAPI/obj/Debug/net8.0/LibraryAPI.pdb,service/LibraryAPI/Library.Domain/obj,service/LibraryAPI/obj/Debug/net8.0/LibraryAPI.GeneratedMSBuildEditorConfig.editorconfig,service/LibraryAPI/bin/Debug/net8.0/Microsoft.AspNetCore.OpenApi.dll,service/LibraryAPI/Program.cs,service/LibraryAPI/obj/Debug/net8.0/LibraryAPI.dll,service/LibraryAPI/obj/Debug/net8.0/LibraryAPI.MvcApplicationPartsAssemblyInfo.cache,service/LibraryAPI/Properties,service/LibraryAPI/obj/project.nuget.cache,service,service/LibraryAPI/obj/Debug/net8.0/LibraryAPI.AssemblyInfo.cs,service/LibraryAPI/Library.Infrastracture/obj,service/LibraryAPI/bin/Debug/net8.0,service/LibraryAPI/obj/Debug/net8.0/LibraryAPI.sourcelink.json,service/LibraryAPI/obj/Debug/net8.0/staticwebassets,service/LibraryAPI/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.LibraryAPI.props,service/LibraryAPI/obj/Debug/net8.0,service/LibraryAPI/bin/Debug/net8.0/LibraryAPI.deps.json,service/LibraryAPI/obj/Debug/net8.0/refint,service/LibraryAPI/obj,service/LibraryAPI/LibraryAPI.http,service/LibraryAPI/obj/Debug/net8.0/LibraryAPI.AssemblyInfoInputs.cache,service/LibraryAPI/bin/Debug/net8.0/LibraryAPI.runtimeconfig.json,service/LibraryAPI/Library.Api/obj,service/LibraryAPI/obj/Debug/net8.0/LibraryAPI.MvcApplicationPartsAssemblyInfo.cs,service/LibraryAPI/obj/Debug/net8.0/LibraryAPI.csproj.FileListAbsolute.txt,service/LibraryAPI/Library.Application/obj,service/LibraryAPI/obj/Debug/net8.0/refint/LibraryAPI.dll,service/LibraryAPI/LibraryAPI.csproj,service/LibraryAPI/obj/Debug/net8.0/ref/LibraryAPI.dll,service/LibraryAPI/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.LibraryAPI.props,service/LibraryAPI/appsettings.Development.json,service/LibraryAPI/bin/Debug/net8.0/LibraryAPI.exe,service/LibraryAPI/obj/Debug/net8.0/ref,service/LibraryAPI/obj/Debug/net8.0/apphost.exe,service/LibraryAPI/obj/Debug/net8.0/LibraryAPI.genruntimeconfig.cache,service/LibraryAPI/obj/Debug/net8.0/.NETCoreApp,Version=v8.0.AssemblyAttributes.cs,service/LibraryAPI/obj/Debug/net8.0/LibraryAPI.csproj.Up2Date,service/LibraryAPI/bin/Debug,service/LibraryAPI/bin/Debug/net8.0/appsettings.json,service/LibraryAPI/obj/LibraryAPI.csproj.nuget.g.targets,service/LibraryAPI/obj/LibraryAPI.csproj.nuget.g.props,service/LibraryAPI/obj/Debug,service/LibraryAPI/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll,service/LibraryAPI/obj/project.assets.json,service/LibraryAPI/Library.Api,service/LibraryAPI/obj/Debug/net8.0/LibraryAPI.csproj.CoreCompileInputs.cache,service/LibraryAPI/obj/Debug/net8.0/staticwebassets.build.json,service/LibraryAPI/bin/Debug/net8.0/Microsoft.OpenApi.dll,service/LibraryAPI/obj/Debug/net8.0/staticwebassets/msbuild.build.LibraryAPI.props,service/LibraryAPI/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll,service/LibraryAPI/Properties/launchSettings.json,service/LibraryAPI/bin/Debug/net8.0/LibraryAPI.pdb,service/LibraryAPI/bin,service/LibraryAPI/Library.Application,service/LibraryAPI/obj/Debug/net8.0/LibraryAPI.GlobalUsings.g.cs,service/LibraryAPI/obj/Debug/net8.0/LibraryAPI.csproj.AssemblyReference.cache,service/LibraryAPI/obj/LibraryAPI.csproj.nuget.dgspec.json,service/LibraryAPI,service/LibraryAPI/Library.Domain
+[NX Daemon Server] - 2024-09-13T13:35:23.788Z - Time taken for 'hash changed files from watcher' 0.41159999999945285ms
+[NX Daemon Server] - 2024-09-13T13:35:23.791Z - Time taken for 'build-project-configs' 1.4315000000005966ms
+[NX Daemon Server] - 2024-09-13T13:35:23.797Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-09-13T13:35:23.797Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-09-13T13:35:23.798Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-09-13T13:35:23.798Z - Time taken for 'total execution time for createProjectGraph()' 3.0437999999994645ms
+[NX Daemon Server] - 2024-09-13T13:35:24.715Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-09-13T13:35:24.715Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-09-13T13:35:24.715Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-09-13T13:35:24.715Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-09-13T13:35:24.716Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-09-13T13:35:24.716Z - Time taken for 'total for creating and serializing project graph' 0.4153999999998632ms
+[NX Daemon Server] - 2024-09-13T13:35:24.716Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-09-13T13:35:24.716Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 0.
+[NX Daemon Server] - 2024-09-13T13:35:24.717Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX Daemon Server] - 2024-09-13T13:35:24.717Z - Done responding to the client handleContextFileData
+[NX Daemon Server] - 2024-09-13T13:35:24.717Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 1. Response time: 0.
+[NX Daemon Server] - 2024-09-13T13:35:24.717Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-09-13T13:36:04.693Z - [WATCHER]: 0 file(s) created or restored, 5 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-09-13T13:36:04.694Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-09-13T13:36:04.753Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-09-13T13:36:04.754Z - [WATCHER]: service/Library.Api/Program.cs was modified
+[NX Daemon Server] - 2024-09-13T13:36:04.800Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-09-13T13:36:04.800Z - [REQUEST]: service/Library.Api/Library.Api.http,service/Library.Api/appsettings.json,service/Library.Api/Properties/launchSettings.json,service/Library.Api/Library.Api.csproj,service/Library.Api/appsettings.Development.json,service/Library.Api/Program.cs
+[NX Daemon Server] - 2024-09-13T13:36:04.800Z - [REQUEST]: 
+[NX Daemon Server] - 2024-09-13T13:36:04.802Z - Time taken for 'hash changed files from watcher' 0.48800000000483124ms
+[NX Daemon Server] - 2024-09-13T13:36:04.804Z - Time taken for 'build-project-configs' 1.5592000000033295ms
+[NX Daemon Server] - 2024-09-13T13:36:04.807Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-09-13T13:36:04.808Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-09-13T13:36:04.808Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-09-13T13:36:04.808Z - Time taken for 'total execution time for createProjectGraph()' 2.211799999997311ms
+[NX Daemon Server] - 2024-09-13T13:36:05.663Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-09-13T13:36:05.664Z - [WATCHER]: 5 file(s) created or restored, 0 file(s) modified, 5 file(s) deleted
+[NX Daemon Server] - 2024-09-13T13:36:05.773Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-09-13T13:36:05.773Z - [REQUEST]: service/Library.Api/obj/project.assets.json,service/Library.Api/obj/Library.Api.csproj.nuget.dgspec.json,service/Library.Api/obj/Library.Api.csproj.nuget.g.props,service/Library.Api/obj/Library.Api.csproj.nuget.g.targets,service/Library.Api/obj/project.nuget.cache
+[NX Daemon Server] - 2024-09-13T13:36:05.773Z - [REQUEST]: service/Library.Api/obj/6e3ed5b2-fdc9-44ac-86d4-13a0e89daad5.tmp,service/Library.Api/obj/42b90c9f-465d-489c-87ab-abc1dd6a0f7f.tmp,service/Library.Api/obj/e02115f2-41dc-4407-81e5-79859ef3a542.tmp,service/Library.Api/obj/3d136bfc-37e1-415c-8223-3755a76f020b.tmp,service/Library.Api/obj/b74b6654-68dd-4a69-9d20-0c038869a911.tmp
+[NX Daemon Server] - 2024-09-13T13:36:05.774Z - Time taken for 'hash changed files from watcher' 0.8296000000045751ms
+[NX Daemon Server] - 2024-09-13T13:36:05.775Z - Time taken for 'build-project-configs' 0.948499999998603ms
+[NX Daemon Server] - 2024-09-13T13:36:05.779Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-09-13T13:36:05.780Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-09-13T13:36:05.780Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-09-13T13:36:05.780Z - Time taken for 'total execution time for createProjectGraph()' 1.719600000003993ms
+[NX Daemon Server] - 2024-09-13T13:36:06.681Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-09-13T13:36:06.681Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-09-13T13:36:06.681Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-09-13T13:36:06.681Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-09-13T13:36:06.682Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-09-13T13:36:06.682Z - Time taken for 'total for creating and serializing project graph' 0.4194999999963329ms
+[NX Daemon Server] - 2024-09-13T13:36:06.682Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-09-13T13:36:06.682Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 0.
+[NX Daemon Server] - 2024-09-13T13:36:06.682Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX Daemon Server] - 2024-09-13T13:36:06.683Z - Done responding to the client handleContextFileData
+[NX Daemon Server] - 2024-09-13T13:36:06.683Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 0. Response time: 1.
+[NX Daemon Server] - 2024-09-13T13:36:06.683Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-09-13T13:36:50.014Z - [WATCHER]: service/Library.Api/Properties/launchSettings.json was modified
+[NX Daemon Server] - 2024-09-13T13:36:50.015Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-09-13T13:36:50.124Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-09-13T13:36:50.124Z - [REQUEST]: service/Library.Api/Properties/launchSettings.json
+[NX Daemon Server] - 2024-09-13T13:36:50.124Z - [REQUEST]: 
+[NX Daemon Server] - 2024-09-13T13:36:50.125Z - Time taken for 'hash changed files from watcher' 1.187999999994645ms
+[NX Daemon Server] - 2024-09-13T13:36:50.127Z - Time taken for 'build-project-configs' 1.1154999999998836ms
+[NX Daemon Server] - 2024-09-13T13:36:50.132Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-09-13T13:36:50.132Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-09-13T13:36:50.132Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-09-13T13:36:50.132Z - Time taken for 'total execution time for createProjectGraph()' 2.092499999998836ms
+[NX Daemon Server] - 2024-09-13T13:36:50.247Z - [WATCHER]: service/Library.Api/Properties/launchSettings.json was modified
+[NX Daemon Server] - 2024-09-13T13:36:50.247Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-09-13T13:36:50.451Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-09-13T13:36:50.451Z - [REQUEST]: service/Library.Api/Properties/launchSettings.json
+[NX Daemon Server] - 2024-09-13T13:36:50.451Z - [REQUEST]: 
+[NX Daemon Server] - 2024-09-13T13:36:50.452Z - Time taken for 'hash changed files from watcher' 1.136000000013155ms
+[NX Daemon Server] - 2024-09-13T13:36:50.454Z - Time taken for 'build-project-configs' 0.8595000000059372ms
+[NX Daemon Server] - 2024-09-13T13:36:50.457Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-09-13T13:36:50.458Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-09-13T13:36:50.458Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-09-13T13:36:50.458Z - Time taken for 'total execution time for createProjectGraph()' 1.8904999999940628ms
+[NX Daemon Server] - 2024-09-13T13:36:50.458Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-09-13T13:36:50.458Z - [WATCHER]: service/Library.Api/Properties/launchSettings.json was modified
+[NX Daemon Server] - 2024-09-13T13:36:50.868Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-09-13T13:36:50.868Z - [REQUEST]: service/Library.Api/Properties/launchSettings.json
+[NX Daemon Server] - 2024-09-13T13:36:50.868Z - [REQUEST]: 
+[NX Daemon Server] - 2024-09-13T13:36:50.870Z - Time taken for 'hash changed files from watcher' 0.34229999998933636ms
+[NX Daemon Server] - 2024-09-13T13:36:50.872Z - Time taken for 'build-project-configs' 1.084099999992759ms
+[NX Daemon Server] - 2024-09-13T13:36:50.878Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-09-13T13:36:50.879Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-09-13T13:36:50.879Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-09-13T13:36:50.879Z - Time taken for 'total execution time for createProjectGraph()' 2.8343999999924563ms
+[NX Daemon Server] - 2024-09-13T13:36:51.477Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-09-13T13:36:51.477Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-09-13T13:36:51.477Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-09-13T13:36:51.478Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-09-13T13:36:51.478Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-09-13T13:36:51.478Z - Time taken for 'total for creating and serializing project graph' 0.4686999999976251ms
+[NX Daemon Server] - 2024-09-13T13:36:51.478Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-09-13T13:36:51.478Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 0.
+[NX Daemon Server] - 2024-09-13T13:36:51.479Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX Daemon Server] - 2024-09-13T13:36:51.480Z - Done responding to the client handleContextFileData
+[NX Daemon Server] - 2024-09-13T13:36:51.480Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 0. Response time: 1.
+[NX Daemon Server] - 2024-09-13T13:36:51.480Z - Closed a connection. Number of open connections: 0
