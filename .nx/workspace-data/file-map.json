@@ -9,38 +9,6 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": "service/Library.Api/bin/Debug/net8.0/Microsoft.AspNetCore.OpenApi.dll",
-        "hash": "2002813330154408989"
-      },
-      {
-        "file": ".gitignore",
-        "hash": "11966728226343652002"
-      },
-      {
-        "file": "service/Library.Api/obj/Debug/net8.0/Library.Api.GeneratedMSBuildEditorConfig.editorconfig",
-        "hash": "7083300539518701412"
-      },
-      {
-        "file": "service/Library.Api/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.Library.Api.props",
-        "hash": "605791578113479477"
-      },
-      {
-        "file": "service/Library.Api/obj/Debug/net8.0/staticwebassets.build.json",
-        "hash": "13146537250328220351"
-      },
-      {
-        "file": "service/Library.Api/obj/Debug/net8.0/refint/Library.Api.dll",
-        "hash": "2182182733335410203"
-      },
-      {
-        "file": "service/Library.Api/obj/Debug/net8.0/Library.Api.csproj.AssemblyReference.cache",
-        "hash": "5461729641956350199"
-      },
-      {
-        "file": "service/Library.Api/Program.cs",
-        "hash": "3710147273754337177"
-      },
-      {
         "file": "service/Library.Api/bin/Debug/net8.0/appsettings.json",
         "hash": "8794831988107864270"
       },
@@ -49,156 +17,292 @@
         "hash": "3339958947771738801"
       },
       {
-        "file": "service/Library.Api/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll",
-        "hash": "5683891036722709085"
-      },
-      {
-        "file": "README.md",
-        "hash": "14205488977247291343"
-      },
-      {
-        "file": "service/Library.Api/obj/Debug/net8.0/Library.Api.dll",
-        "hash": "8615434972136355100"
-      },
-      {
-        "file": "service/Library.Api/obj/Debug/net8.0/staticwebassets/msbuild.build.Library.Api.props",
-        "hash": "14986325128316264622"
-      },
-      {
-        "file": "service/Library.Api/obj/Debug/net8.0/Library.Api.sourcelink.json",
-        "hash": "6327969033432148986"
-      },
-      {
-        "file": "service/Library.Api/obj/Debug/net8.0/Library.Api.AssemblyInfo.cs",
-        "hash": "18284182177557912946"
-      },
-      {
-        "file": "service/Library.Api/obj/Debug/net8.0/Library.Api.MvcApplicationPartsAssemblyInfo.cache",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "webapp/.gitignore",
-        "hash": "17107242987988535020"
-      },
-      {
-        "file": "webapp/package.json",
-        "hash": "5072586768206257105"
-      },
-      {
-        "file": "service/Library.Api/obj/Debug/net8.0/Library.Api.assets.cache",
-        "hash": "12261041279043753940"
-      },
-      {
-        "file": "service/Library.Api/obj/Debug/net8.0/Library.Api.MvcApplicationPartsAssemblyInfo.cs",
-        "hash": "4404529684435555960"
-      },
-      {
-        "file": "service/Library.Api/appsettings.json",
-        "hash": "8794831988107864270"
-      },
-      {
-        "file": "service/Library.Api/obj/Library.Api.csproj.nuget.g.targets",
-        "hash": "18244439772321642956"
-      },
-      {
-        "file": "service/Library.Api/obj/project.assets.json",
-        "hash": "10275523571293303589"
-      },
-      {
-        "file": "service/Library.Api/Library.Api.csproj",
-        "hash": "10120717357304998138"
-      },
-      {
-        "file": "webapp/package-lock.json",
-        "hash": "17782855661093179891"
-      },
-      {
-        "file": "webapp/.vscode/extensions.json",
-        "hash": "3833545590435012078"
-      },
-      {
-        "file": "service/Library.Api/obj/Debug/net8.0/apphost.exe",
-        "hash": "8007884306759620362"
-      },
-      {
-        "file": "service/Library.Api/obj/Debug/net8.0/Library.Api.csproj.CoreCompileInputs.cache",
-        "hash": "3065185198024734696"
-      },
-      {
-        "file": "service/Library.Api/obj/Library.Api.csproj.nuget.g.props",
-        "hash": "3998228953450402095"
-      },
-      {
-        "file": "service/Library.Api/obj/Debug/net8.0/Library..F301F6DA.Up2Date",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "service/Library.Api/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.Library.Api.props",
-        "hash": "14376984494929447710"
-      },
-      {
         "file": "service/Library.Api/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll",
         "hash": "10365789031782649924"
-      },
-      {
-        "file": "webapp/README.md",
-        "hash": "16450816814128674667"
-      },
-      {
-        "file": "service/Library.Api/obj/Debug/net8.0/Library.Api.AssemblyInfoInputs.cache",
-        "hash": "17501949122459869321"
       },
       {
         "file": "service/Library.Api/obj/project.nuget.cache",
         "hash": "1269320070948458854"
       },
       {
-        "file": "service/Library.Api/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll",
-        "hash": "17664938003933267034"
+        "file": "service/Library.Api/obj/Debug/net8.0/Library..F301F6DA.Up2Date",
+        "hash": "3244421341483603138"
       },
       {
-        "file": "service/Library.Api/bin/Debug/net8.0/Library.Api.exe",
-        "hash": "8007884306759620362"
+        "file": "service/Library.Api/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll",
+        "hash": "5683891036722709085"
       },
       {
-        "file": "service/Library.Api/bin/Debug/net8.0/Microsoft.OpenApi.dll",
-        "hash": "13030088332715294216"
+        "file": "service/Library.Infrastructure/obj/Library.Infrastructure.csproj.nuget.g.props",
+        "hash": "15624200405247894638"
+      },
+      {
+        "file": "service/Library.Domain/obj/project.assets.json",
+        "hash": "9144045089303950527"
+      },
+      {
+        "file": "service/Library.Api/obj/Debug/net8.0/Library.Api.csproj.CoreCompileInputs.cache",
+        "hash": "6446001977669099074"
+      },
+      {
+        "file": "service/Library.Api/obj/Debug/net8.0/apphost.exe",
+        "hash": "11079083273252751109"
+      },
+      {
+        "file": "service/Library.Infrastructure/obj/project.nuget.cache",
+        "hash": "9735084378809313369"
+      },
+      {
+        "file": "service/Library.Api/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.Library.Api.props",
+        "hash": "605791578113479477"
+      },
+      {
+        "file": "service/Library.Infrastructure/obj/Library.Infrastructure.csproj.nuget.dgspec.json",
+        "hash": "3780423856337089939"
+      },
+      {
+        "file": "service/Library.Api/bin/Debug/net8.0/Library.Api.pdb",
+        "hash": "16880532560439997796"
       },
       {
         "file": "service/Library.Api/obj/Debug/net8.0/.NETCoreApp,Version=v8.0.AssemblyAttributes.cs",
         "hash": "10887795802549845076"
       },
       {
+        "file": "service/Library.Api/obj/Library.Api.csproj.nuget.g.targets",
+        "hash": "18244439772321642956"
+      },
+      {
+        "file": "webapp/README.md",
+        "hash": "16450816814128674667"
+      },
+      {
+        "file": "service/Library.Infrastructure/obj/project.assets.json",
+        "hash": "8613461472120174801"
+      },
+      {
         "file": "service/Library.Api/obj/Debug/net8.0/Library.Api.pdb",
-        "hash": "11873927869511296174"
+        "hash": "16880532560439997796"
       },
       {
-        "file": "service/Library.Api/obj/Debug/net8.0/Library.Api.GlobalUsings.g.cs",
-        "hash": "655979258939108364"
+        "file": "service/Library.Api/obj/Debug/net8.0/Library.Api.AssemblyInfoInputs.cache",
+        "hash": "1269073845125884310"
       },
       {
-        "file": "service/Library.Api/appsettings.Development.json",
-        "hash": "18134873748250061975"
+        "file": "service/Library.Api/Library.Api.http",
+        "hash": "3571187308577260691"
+      },
+      {
+        "file": "service/Library.Infrastructure/obj/Library.Infrastructure.csproj.nuget.g.targets",
+        "hash": "15192663866877192239"
+      },
+      {
+        "file": "service/Library.Domain/obj/Library.Domain.csproj.nuget.g.props",
+        "hash": "15624200405247894638"
+      },
+      {
+        "file": "service/Library.Domain/Library.Domain.csproj",
+        "hash": "1292097677138460379"
+      },
+      {
+        "file": "service/LibraryAPI.sln",
+        "hash": "195409911514932500"
+      },
+      {
+        "file": "service/Library.Application/Library.Application.csproj",
+        "hash": "1292097677138460379"
+      },
+      {
+        "file": "service/Library.Application/obj/Library.Application.csproj.nuget.g.targets",
+        "hash": "15192663866877192239"
+      },
+      {
+        "file": "webapp/package-lock.json",
+        "hash": "17782855661093179891"
+      },
+      {
+        "file": "service/Library.Application/obj/Library.Application.csproj.nuget.dgspec.json",
+        "hash": "17387993479820493634"
+      },
+      {
+        "file": "service/Library.Api/Library.Api.csproj",
+        "hash": "10120717357304998138"
+      },
+      {
+        "file": "service/Library.Api/obj/Debug/net8.0/Library.Api.GeneratedMSBuildEditorConfig.editorconfig",
+        "hash": "7083300539518701412"
       },
       {
         "file": "webapp/.editorconfig",
         "hash": "5443105041930014821"
       },
       {
-        "file": "service/Library.Api/obj/Library.Api.csproj.nuget.dgspec.json",
-        "hash": "1652106359402558443"
+        "file": "service/Library.Api/obj/Debug/net8.0/Library.Api.dll",
+        "hash": "11029256612237108430"
+      },
+      {
+        "file": "service/Library.Infrastructure/Library.Infrastructure.csproj",
+        "hash": "1292097677138460379"
       },
       {
         "file": ".nx/nxw.js",
         "hash": "11254603345854076312"
       },
       {
+        "file": "service/Library.Api/obj/Debug/net8.0/Library.Api.assets.cache",
+        "hash": "18339158263705744751"
+      },
+      {
+        "file": "service/Library.Api/bin/Debug/net8.0/Microsoft.Identity.Client.dll",
+        "hash": "14938594371748822748"
+      },
+      {
+        "file": "service/Library.Infrastructure/Class1.cs",
+        "hash": "13390803765681273225"
+      },
+      {
+        "file": "service/Library.Domain/obj/project.nuget.cache",
+        "hash": "10254087347670629333"
+      },
+      {
+        "file": "service/Library.Api/obj/Debug/net8.0/refint/Library.Api.dll",
+        "hash": "2538448159931770533"
+      },
+      {
+        "file": "README.md",
+        "hash": "14205488977247291343"
+      },
+      {
+        "file": "service/Library.Api/bin/Debug/net8.0/Microsoft.AspNetCore.OpenApi.dll",
+        "hash": "2002813330154408989"
+      },
+      {
+        "file": "service/Library.Api/appsettings.Development.json",
+        "hash": "18134873748250061975"
+      },
+      {
+        "file": "service/Library.Domain/obj/Library.Domain.csproj.nuget.g.targets",
+        "hash": "15192663866877192239"
+      },
+      {
+        "file": "service/Library.Api/bin/Debug/net8.0/Microsoft.OpenApi.dll",
+        "hash": "13030088332715294216"
+      },
+      {
         "file": "service/Library.Api/Properties/launchSettings.json",
         "hash": "3886532541293035277"
       },
       {
-        "file": "service/Library.Api/Library.Api.http",
-        "hash": "3571187308577260691"
+        "file": "service/Library.Api/appsettings.json",
+        "hash": "8794831988107864270"
+      },
+      {
+        "file": "service/Library.Application/obj/project.nuget.cache",
+        "hash": "15137835321872823770"
+      },
+      {
+        "file": "service/Library.Api/obj/Debug/net8.0/Library.Api.GlobalUsings.g.cs",
+        "hash": "655979258939108364"
+      },
+      {
+        "file": "service/Library.Api/obj/Debug/net8.0/Library.Api.csproj.FileListAbsolute.txt",
+        "hash": "5450384052643472213"
+      },
+      {
+        "file": "service/Library.Api/bin/Debug/net8.0/Library.Api.exe",
+        "hash": "8007884306759620362"
+      },
+      {
+        "file": "service/Library.Api/obj/Debug/net8.0/staticwebassets/msbuild.build.Library.Api.props",
+        "hash": "14986325128316264622"
+      },
+      {
+        "file": "service/Library.Api/obj/Debug/net8.0/staticwebassets.build.json",
+        "hash": "13146537250328220351"
+      },
+      {
+        "file": "service/Library.Api/obj/Debug/net8.0/Library.Api.MvcApplicationPartsAssemblyInfo.cs",
+        "hash": "4404529684435555960"
+      },
+      {
+        "file": "service/Library.Application/obj/project.assets.json",
+        "hash": "15270300987614130595"
+      },
+      {
+        "file": "service/Library.Api/obj/Debug/net8.0/Library.Api.AssemblyInfo.cs",
+        "hash": "18270635259690681647"
+      },
+      {
+        "file": "service/Library.Application/Class1.cs",
+        "hash": "6246991602649244659"
+      },
+      {
+        "file": "service/Library.Api/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll",
+        "hash": "17664938003933267034"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "11966728226343652002"
+      },
+      {
+        "file": "service/Library.Api/obj/Debug/net8.0/Library.Api.sourcelink.json",
+        "hash": "13221524750547566157"
+      },
+      {
+        "file": "service/Library.Api/obj/Debug/net8.0/ref/Library.Api.dll",
+        "hash": "2538448159931770533"
+      },
+      {
+        "file": "service/Library.Domain/Class1.cs",
+        "hash": "3846616908425728795"
+      },
+      {
+        "file": "service/Library.Api/obj/project.assets.json",
+        "hash": "10275523571293303589"
+      },
+      {
+        "file": "service/Library.Api/obj/Library.Api.csproj.nuget.g.props",
+        "hash": "3998228953450402095"
+      },
+      {
+        "file": "webapp/package.json",
+        "hash": "5072586768206257105"
+      },
+      {
+        "file": "service/Library.Domain/obj/Library.Domain.csproj.nuget.dgspec.json",
+        "hash": "3716482773410569498"
+      },
+      {
+        "file": "webapp/.vscode/extensions.json",
+        "hash": "3833545590435012078"
+      },
+      {
+        "file": "webapp/.gitignore",
+        "hash": "17107242987988535020"
+      },
+      {
+        "file": "service/Library.Api/obj/Debug/net8.0/Library.Api.csproj.AssemblyReference.cache",
+        "hash": "14158547183710481397"
+      },
+      {
+        "file": "service/Library.Api/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.Library.Api.props",
+        "hash": "14376984494929447710"
+      },
+      {
+        "file": "service/Library.Application/obj/Library.Application.csproj.nuget.g.props",
+        "hash": "15624200405247894638"
+      },
+      {
+        "file": "service/Library.Api/Program.cs",
+        "hash": "3710147273754337177"
+      },
+      {
+        "file": "service/Library.Api/obj/Library.Api.csproj.nuget.dgspec.json",
+        "hash": "1652106359402558443"
+      },
+      {
+        "file": "service/Library.Api/obj/Debug/net8.0/Library.Api.MvcApplicationPartsAssemblyInfo.cache",
+        "hash": "3244421341483603138"
       }
     ],
     "projectFileMap": {}
