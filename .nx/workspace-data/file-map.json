@@ -1,0 +1,94 @@
+{
+  "version": "6.0",
+  "nxVersion": "19.7.2",
+  "deps": {
+    "nx": "19.7.2"
+  },
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": "webapp/README.md",
+        "hash": "16450816814128674667"
+      },
+      {
+        "file": "service/Library.Api/Library.Api.http",
+        "hash": "3571187308577260691"
+      },
+      {
+        "file": "service/Library.Api/obj/project.assets.json",
+        "hash": "17171198866498118720"
+      },
+      {
+        "file": "service/Library.Api/appsettings.json",
+        "hash": "8794831988107864270"
+      },
+      {
+        "file": ".nx/nxw.js",
+        "hash": "11254603345854076312"
+      },
+      {
+        "file": "webapp/package-lock.json",
+        "hash": "17782855661093179891"
+      },
+      {
+        "file": "webapp/package.json",
+        "hash": "5072586768206257105"
+      },
+      {
+        "file": "service/Library.Api/Library.Api.csproj",
+        "hash": "13962039704198912251"
+      },
+      {
+        "file": "README.md",
+        "hash": "14205488977247291343"
+      },
+      {
+        "file": "service/Library.Api/obj/Library.Api.csproj.nuget.g.targets",
+        "hash": "18244439772321642956"
+      },
+      {
+        "file": "webapp/.gitignore",
+        "hash": "17107242987988535020"
+      },
+      {
+        "file": "service/Library.Api/obj/Library.Api.csproj.nuget.g.props",
+        "hash": "12445500718374338061"
+      },
+      {
+        "file": "service/Library.Api/Program.cs",
+        "hash": "3710147273754337177"
+      },
+      {
+        "file": "webapp/.vscode/extensions.json",
+        "hash": "3833545590435012078"
+      },
+      {
+        "file": "service/Library.Api/appsettings.Development.json",
+        "hash": "3339958947771738801"
+      },
+      {
+        "file": "webapp/.editorconfig",
+        "hash": "5443105041930014821"
+      },
+      {
+        "file": "service/Library.Api/Properties/launchSettings.json",
+        "hash": "3886532541293035277"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "11966728226343652002"
+      },
+      {
+        "file": "service/Library.Api/obj/project.nuget.cache",
+        "hash": "4604077680390583479"
+      },
+      {
+        "file": "service/Library.Api/obj/Library.Api.csproj.nuget.dgspec.json",
+        "hash": "3526047471467290991"
+      }
+    ],
+    "projectFileMap": {}
+  }
+}

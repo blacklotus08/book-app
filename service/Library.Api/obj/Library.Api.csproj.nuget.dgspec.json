@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Personal\\Applications\\book-app\\service\\LibraryAPI\\LibraryAPI.csproj": {}
+    "D:\\Personal\\Applications\\book-app\\service\\Library.Api\\Library.Api.csproj": {}
   },
   "projects": {
-    "D:\\Personal\\Applications\\book-app\\service\\LibraryAPI\\LibraryAPI.csproj": {
+    "D:\\Personal\\Applications\\book-app\\service\\Library.Api\\Library.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Personal\\Applications\\book-app\\service\\LibraryAPI\\LibraryAPI.csproj",
-        "projectName": "LibraryAPI",
-        "projectPath": "D:\\Personal\\Applications\\book-app\\service\\LibraryAPI\\LibraryAPI.csproj",
+        "projectUniqueName": "D:\\Personal\\Applications\\book-app\\service\\Library.Api\\Library.Api.csproj",
+        "projectName": "Library.Api",
+        "projectPath": "D:\\Personal\\Applications\\book-app\\service\\Library.Api\\Library.Api.csproj",
         "packagesPath": "C:\\Users\\Blacklotus\\.nuget\\packages\\",
-        "outputPath": "D:\\Personal\\Applications\\book-app\\service\\LibraryAPI\\obj\\",
+        "outputPath": "D:\\Personal\\Applications\\book-app\\service\\Library.Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Blacklotus\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -51,7 +51,7 @@
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.7.3, )"
+              "version": "[6.4.0, )"
             }
           },
           "imports": [
