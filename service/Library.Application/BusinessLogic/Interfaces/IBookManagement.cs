@@ -8,9 +8,8 @@ namespace Library.Application.BusinessLogic.Interfaces
     {
         Task<ResponsePayload<List<BookViewModel>>> GetAllBooks();
         Task<ResponsePayload<BookViewModel>> GetBook(Guid id);
-
-        Task<ResponsePayload<BookViewModel>> CreateBook(BookPayloadModel payload);
-        Task<ResponsePayload<BookViewModel>> UpdateBook(Guid id, BookPayloadModel payload);
+        Task<ResponsePayload<BookViewModel>> CreateBook(Book payload);
+        Task<ResponsePayload<BookViewModel>> UpdateBook(Guid id, Book payload);
         Task<ResponsePayload<BookViewModel>> DeleteBook(Guid id);
     }
 }

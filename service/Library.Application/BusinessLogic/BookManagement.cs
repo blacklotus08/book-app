@@ -1,10 +1,10 @@
-﻿using AutoMapper;
-using Library.Application.BusinessLogic.Interfaces;
+﻿using Library.Application.BusinessLogic.Interfaces;
 using Library.Application.PayloadModel;
 using Library.Application.ViewModel;
-using Library.Infrastructure.Entities;
 using Library.Infrastructure.Repository.Interfaces;
 using Library.Domain.Common;
+using AutoMapper;
+using Library.Infrastructure.Entities;
 
 namespace Library.Application.BusinessLogic
 {
@@ -18,165 +18,117 @@ namespace Library.Application.BusinessLogic
             _mapper = mapper;
         }
 
-        public Task<ResponsePayload<BookViewModel>> CreateBook(BookPayloadModel payload)
+        public async Task<ResponsePayload<BookViewModel>> CreateBook(Book payload)
         {
-            throw new NotImplementedException();
+            BookEntity? bookEntity = _mapper.Map<BookEntity>(payload);
+            bool isSuccess = false;
+            if (bookEntity != null) {
+                await _bookRepository.Insert(bookEntity);
+                isSuccess = await _bookRepository.Persist();
+            }
+
+            return new ResponsePayload<BookViewModel>
+            {
+                Data = null,
+                IsSuccess = isSuccess,
+                ErrorMessage = isSuccess ? string.Empty : string.Format(Localization.ErrorOnPersist, "Adding Book"),
+                UIFriendlyMessage = isSuccess ? Localization.FriendlySuccessMessage : Localization.FriendlyErrorMessage
+            };
+
         }
 
-        public Task<ResponsePayload<BookViewModel>> DeleteBook(Guid id)
+        public async Task<ResponsePayload<BookViewModel>> DeleteBook(Guid id)
         {
-            throw new NotImplementedException();
+            BookEntity? bookEntity = await _bookRepository.Get(id);
+
+            if (bookEntity == null)
+            {
+                return new ResponsePayload<BookViewModel>
+                {
+                    Data = null,
+                    IsSuccess = false,
+                    ErrorMessage = string.Format(Localization.NoRecordFound, Localization.GetEntityFriendlyName(typeof(BookEntity))),
+                    UIFriendlyMessage = string.Format(Localization.NoRecordFound, Localization.GetEntityFriendlyName(typeof(BookEntity)))
+                };
+            }
+            _bookRepository.Delete(bookEntity);
+
+            bool isSuccess = await _bookRepository.Persist();
+
+            return new ResponsePayload<BookViewModel>
+            {
+                Data = null,
+                IsSuccess = isSuccess,
+                ErrorMessage = isSuccess ? string.Empty : string.Format(Localization.ErrorOnPersist, "Deleting book"),
+                UIFriendlyMessage = isSuccess ? Localization.FriendlySuccessMessage : Localization.FriendlyErrorMessage
+            };
         }
 
-        public Task<ResponsePayload<List<BookViewModel>>> GetAllBooks()
+        public async Task<ResponsePayload<List<BookViewModel>>> GetAllBooks()
         {
-            throw new NotImplementedException();
+            List<BookViewModel>? data = _mapper.Map<List<BookViewModel>>(await _bookRepository.GetAll());
+
+            return new ResponsePayload<List<BookViewModel>>
+            {
+                Data = data,
+                IsSuccess = true,
+                ErrorMessage = string.Empty,
+                UIFriendlyMessage = Localization.FriendlySuccessMessage
+            };
         }
 
-        public Task<ResponsePayload<BookViewModel>> GetBook(Guid id)
+        public async Task<ResponsePayload<BookViewModel>> GetBook(Guid id)
         {
-            throw new NotImplementedException();
+            BookEntity? bookEntity = await _bookRepository.Get(id);
+
+            if (bookEntity == null)
+            {
+                return new ResponsePayload<BookViewModel>
+                {
+                    Data = null,
+                    IsSuccess = false,
+                    ErrorMessage = string.Format(Localization.NoRecordFound, typeof(BookEntity).FullName),
+                    UIFriendlyMessage = string.Format(Localization.NoRecordFound, typeof(BookEntity).FullName)
+                };
+            }
+
+            BookViewModel? data = _mapper.Map<BookViewModel>(bookEntity);
+
+            return new ResponsePayload<BookViewModel>
+            {
+                Data = data,
+                IsSuccess = true,
+                ErrorMessage = string.Empty,
+                UIFriendlyMessage = Localization.FriendlySuccessMessage
+            };
         }
 
-        public Task<ResponsePayload<BookViewModel>> UpdateBook(Guid id, BookPayloadModel payload)
+        public async Task<ResponsePayload<BookViewModel>> UpdateBook(Guid id, Book payload)
         {
-            throw new NotImplementedException();
+            BookEntity? bookEntity = await _bookRepository.Get(id);
+
+            if (bookEntity == null)
+            {
+                return new ResponsePayload<BookViewModel>
+                {
+                    Data = null,
+                    IsSuccess = false,
+                    ErrorMessage = string.Format(Localization.NoRecordFound, Localization.GetEntityFriendlyName(typeof(BookEntity))),
+                    UIFriendlyMessage = string.Format(Localization.NoRecordFound, Localization.GetEntityFriendlyName(typeof(BookEntity)))
+                };
+            }
+            _mapper.Map(payload, bookEntity);
+            _bookRepository.Update(bookEntity);
+
+            bool isSuccess = await _bookRepository.Persist();
+
+            return new ResponsePayload<BookViewModel>
+            {
+                Data = null,
+                IsSuccess = isSuccess,
+                ErrorMessage = isSuccess ? string.Empty : string.Format(Localization.ErrorOnPersist, "Updating book"),
+                UIFriendlyMessage = isSuccess ? Localization.FriendlySuccessMessage : Localization.FriendlyErrorMessage
+            };
         }
-
-
-        // public async Task<ResponsePayload<UserViewModel>> GetUser(Guid id)
-        // {
-        //     UserEntity? userEntity = await _userRepository.Get(id);
-
-        //     if (userEntity == null)
-        //     {
-        //         return new ResponsePayload<UserViewModel>
-        //         {
-        //             Data = null,
-        //             IsSuccess = false,
-        //             ErrorMessage = string.Format(Localization.NoRecordFound, typeof(UserEntity).FullName),
-        //             UIFriendlyMessage = string.Format(Localization.NoRecordFound, typeof(UserEntity).FullName)
-        //         };
-        //     }
-
-        //     UserViewModel data = _mapper.Map<UserViewModel>(userEntity);
-
-        //     return new ResponsePayload<UserViewModel>
-        //     {
-        //         Data = data,
-        //         IsSuccess = true,
-        //         ErrorMessage = string.Empty,
-        //         UIFriendlyMessage = Localization.FriendlySuccessMessage
-        //     };
-        // }
-
-        // public async Task<ResponsePayload<List<UserViewModel>>> GetAllUsers()
-        // {
-        //     List<UserViewModel> data = _mapper.Map<List<UserViewModel>>(await _userRepository.GetAll());
-
-        //     return new ResponsePayload<List<UserViewModel>>
-        //     {
-        //         Data = data,
-        //         IsSuccess = true,
-        //         ErrorMessage = string.Empty,
-        //         UIFriendlyMessage = Localization.FriendlySuccessMessage
-        //     };
-        // }
-
-        // public async Task<ResponsePayload<UserViewModel>> CreateUser(UserPayloadModel payload)
-        // {
-        //     UserEntity userEntity = _mapper.Map<UserEntity>(payload);
-
-        //     bool isUsernameExists = await _userRepository.GetUserNameExists(userEntity.Username);
-
-        //     if(isUsernameExists)
-        //     {
-        //         return new ResponsePayload<UserViewModel>
-        //         {
-        //             Data = null,
-        //             IsSuccess = false,
-        //             ErrorMessage = string.Format(Localization.UsernameExists, "Creating User"),
-        //             UIFriendlyMessage = Localization.FriendlyErrorMessage
-        //         };
-        //     }
-
-        //     byte[] salt = _authSecurityHelper.CreateSalt();
-        //     byte[] hash = _authSecurityHelper.HashPassword(userEntity.Password, salt);
-
-        //     userEntity.Password = Convert.ToBase64String(hash);
-        //     userEntity.Salt = Convert.ToBase64String(salt);
-
-        //     await _userRepository.Insert(userEntity);
-
-        //     bool isSuccess = await _userRepository.Persist();
-
-        //     return new ResponsePayload<UserViewModel>
-        //     {
-        //         Data = null,
-        //         IsSuccess = isSuccess,
-        //         ErrorMessage = isSuccess ? string.Empty : string.Format(Localization.ErrorOnPersist, "Creating User"),
-        //         UIFriendlyMessage = isSuccess ? Localization.FriendlySuccessMessage : Localization.FriendlyErrorMessage
-        //     };
-        // }
-
-
-        // public async Task<ResponsePayload<UserViewModel>> UpdateUser(Guid id, UserUpdatePayloadModel payload)
-        // {
-
-        //     UserEntity? userEntity = await _userRepository.Get(id);
-
-        //     if (userEntity == null)
-        //     {
-        //         return new ResponsePayload<UserViewModel>
-        //         {
-        //             Data = null,
-        //             IsSuccess = false,
-        //             ErrorMessage = string.Format(Localization.NoRecordFound, Localization.GetEntityFriendlyName(typeof(UserEntity))),
-        //             UIFriendlyMessage = string.Format(Localization.NoRecordFound, Localization.GetEntityFriendlyName(typeof(UserEntity)))
-        //         };
-        //     }
-        //     _mapper.Map(payload, userEntity);
-
-        //     _userRepository.Update(userEntity);
-
-        //     bool isSuccess = await _userRepository.Persist();
-
-        //     return new ResponsePayload<UserViewModel>
-        //     {
-        //         Data = null,
-        //         IsSuccess = isSuccess,
-        //         ErrorMessage = isSuccess ? string.Empty : string.Format(Localization.ErrorOnPersist, "Updating User"),
-        //         UIFriendlyMessage = isSuccess ? Localization.FriendlySuccessMessage : Localization.FriendlyErrorMessage
-        //     };
-        // }
-
-        // public async Task<ResponsePayload<UserViewModel>> DeleteUser(Guid id)
-        // {
-
-        //     UserEntity? userEntity = await _userRepository.Get(id);
-
-        //     if (userEntity == null)
-        //     {
-        //         return new ResponsePayload<UserViewModel>
-        //         {
-        //             Data = null,
-        //             IsSuccess = false,
-        //             ErrorMessage = string.Format(Localization.NoRecordFound, Localization.GetEntityFriendlyName(typeof(UserEntity))),
-        //             UIFriendlyMessage = string.Format(Localization.NoRecordFound, Localization.GetEntityFriendlyName(typeof(UserEntity)))
-        //         };
-        //     }
-        //     _userRepository.Delete(userEntity);
-
-        //     bool isSuccess = await _userRepository.Persist();
-
-        //     return new ResponsePayload<UserViewModel>
-        //     {
-        //         Data = null,
-        //         IsSuccess = isSuccess,
-        //         ErrorMessage = isSuccess ? string.Empty : string.Format(Localization.ErrorOnPersist, "Deleting User"),
-        //         UIFriendlyMessage = isSuccess ? Localization.FriendlySuccessMessage : Localization.FriendlyErrorMessage
-        //     };
-        // }
-
     }
 }

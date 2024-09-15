@@ -1,12 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Library.Infrastructure.Entities;
-using Library.Infrastructure.Repository.Interfaces;
 using Library.Infrastructure.Shared;
-using Library.Infrastructure.Entities.Interfaces;
+using Library.Infrastructure.Repository.Interfaces;
 
 namespace Library.Infrastructure.Repository
 {
     public class BookRepository :  Repository<BookEntity>, IBookRepository
+    
     {
         public BookRepository(AppDbContext _context) : base(_context)
         {

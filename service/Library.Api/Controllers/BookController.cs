@@ -40,7 +40,7 @@ namespace Library.Api.Controllers
         /// </summary>
         /// <returns>Add a new book to the library.</returns>
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] BookPayloadModel model)
+        public async Task<IActionResult> Create([FromBody] Book model)
         {
             return Ok(await _bookManagement.CreateBook(model));
         }
@@ -50,7 +50,7 @@ namespace Library.Api.Controllers
         /// </summary>
         /// <returns>Update an existing book by its ID.</returns>
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(Guid id, [FromBody] BookPayloadModel model)
+        public async Task<IActionResult> Update(Guid id, [FromBody] Book model)
         {
             return Ok(await _bookManagement.UpdateBook(id, model));
         }

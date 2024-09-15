@@ -9,7 +9,7 @@ namespace Library.Application.Mappers
     {
         public EntityMapperConfigurationProfile()
         {
-            CreateMap<BookPayloadModel, BookEntity>();
+            CreateMap<Book, BookEntity>();
         }
     }
 }

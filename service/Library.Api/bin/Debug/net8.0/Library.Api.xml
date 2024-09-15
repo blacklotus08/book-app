@@ -16,13 +16,13 @@
             </summary>
             <returns>Retrieve a specific book by its ID.</returns>
         </member>
-        <member name="M:Library.Api.Controllers.BookController.Create(Library.Application.PayloadModel.BookPayloadModel)">
+        <member name="M:Library.Api.Controllers.BookController.Create(Library.Application.PayloadModel.Book)">
             <summary>
             Add a new book
             </summary>
             <returns>Add a new book to the library.</returns>
         </member>
-        <member name="M:Library.Api.Controllers.BookController.Update(System.Guid,Library.Application.PayloadModel.BookPayloadModel)">
+        <member name="M:Library.Api.Controllers.BookController.Update(System.Guid,Library.Application.PayloadModel.Book)">
             <summary>
             Update a book
             </summary>

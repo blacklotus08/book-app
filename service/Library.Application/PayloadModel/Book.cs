@@ -2,7 +2,7 @@
 
 namespace Library.Application.PayloadModel
 {
-    public class BookPayloadModel
+    public class Book
     {
         [Required]
         public virtual string Title { get; set; } = string.Empty;
