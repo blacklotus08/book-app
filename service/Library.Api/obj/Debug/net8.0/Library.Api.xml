@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Library.Api</name>
+    </assembly>
+    <members>
+        <member name="M:Library.Api.Controllers.BookController.Get">
+            <summary>
+            Get all books
+            </summary>
+            <returns>Retrieve a list of all books in the library.</returns>
+        </member>
+        <member name="M:Library.Api.Controllers.BookController.Get(System.Guid)">
+            <summary>
+            Get a specific book
+            </summary>
+            <returns>Retrieve a specific book by its ID.</returns>
+        </member>
+        <member name="M:Library.Api.Controllers.BookController.Create(Library.Application.PayloadModel.BookPayloadModel)">
+            <summary>
+            Add a new book
+            </summary>
+            <returns>Add a new book to the library.</returns>
+        </member>
+        <member name="M:Library.Api.Controllers.BookController.Update(System.Guid,Library.Application.PayloadModel.BookPayloadModel)">
+            <summary>
+            Update a book
+            </summary>
+            <returns>Update an existing book by its ID.</returns>
+        </member>
+        <member name="M:Library.Api.Controllers.BookController.Destroy(System.Guid)">
+            <summary>
+            Soft delete a book
+            </summary>
+            <returns>Soft delete an existing book by its ID.</returns>
+        </member>
+    </members>
+</doc>

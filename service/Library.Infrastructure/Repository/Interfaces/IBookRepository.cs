@@ -2,7 +2,11 @@
 
 namespace Library.Infrastructure.Repository.Interfaces
 {
-    public interface IBookRepository : IRepository<BookRepository>
+    public interface IBookRepository : IBookRepository<BookRepository>
+    {
+    }
+
+    public interface IBookRepository<T>
     {
     }
 }

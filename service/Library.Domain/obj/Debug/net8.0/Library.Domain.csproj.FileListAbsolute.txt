@@ -1,0 +1,12 @@
+D:\Personal\Applications\book-app\service\Library.Domain\bin\Debug\net8.0\Library.Domain.deps.json
+D:\Personal\Applications\book-app\service\Library.Domain\bin\Debug\net8.0\Library.Domain.dll
+D:\Personal\Applications\book-app\service\Library.Domain\bin\Debug\net8.0\Library.Domain.pdb
+D:\Personal\Applications\book-app\service\Library.Domain\obj\Debug\net8.0\Library.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Personal\Applications\book-app\service\Library.Domain\obj\Debug\net8.0\Library.Domain.AssemblyInfoInputs.cache
+D:\Personal\Applications\book-app\service\Library.Domain\obj\Debug\net8.0\Library.Domain.AssemblyInfo.cs
+D:\Personal\Applications\book-app\service\Library.Domain\obj\Debug\net8.0\Library.Domain.csproj.CoreCompileInputs.cache
+D:\Personal\Applications\book-app\service\Library.Domain\obj\Debug\net8.0\Library.Domain.sourcelink.json
+D:\Personal\Applications\book-app\service\Library.Domain\obj\Debug\net8.0\Library.Domain.dll
+D:\Personal\Applications\book-app\service\Library.Domain\obj\Debug\net8.0\refint\Library.Domain.dll
+D:\Personal\Applications\book-app\service\Library.Domain\obj\Debug\net8.0\Library.Domain.pdb
+D:\Personal\Applications\book-app\service\Library.Domain\obj\Debug\net8.0\ref\Library.Domain.dll

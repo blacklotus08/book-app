@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "D:\\Personal\\Applications\\book-app\\service\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{493D6702-60D8-4DDD-A311-F67B5A634C03}|Library.Infrastructure\\Library.Infrastructure.csproj|d:\\personal\\applications\\book-app\\service\\library.infrastructure\\repository\\interfaces\\ibookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{493D6702-60D8-4DDD-A311-F67B5A634C03}|Library.Infrastructure\\Library.Infrastructure.csproj|solutionrelative:library.infrastructure\\repository\\interfaces\\ibookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{493D6702-60D8-4DDD-A311-F67B5A634C03}|Library.Infrastructure\\Library.Infrastructure.csproj|d:\\personal\\applications\\book-app\\service\\library.infrastructure\\entities\\bookentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{493D6702-60D8-4DDD-A311-F67B5A634C03}|Library.Infrastructure\\Library.Infrastructure.csproj|solutionrelative:library.infrastructure\\entities\\bookentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{493D6702-60D8-4DDD-A311-F67B5A634C03}|Library.Infrastructure\\Library.Infrastructure.csproj|d:\\personal\\applications\\book-app\\service\\library.infrastructure\\repository\\bookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{493D6702-60D8-4DDD-A311-F67B5A634C03}|Library.Infrastructure\\Library.Infrastructure.csproj|solutionrelative:library.infrastructure\\repository\\bookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{493D6702-60D8-4DDD-A311-F67B5A634C03}|Library.Infrastructure\\Library.Infrastructure.csproj|d:\\personal\\applications\\book-app\\service\\library.infrastructure\\entities\\bookentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{493D6702-60D8-4DDD-A311-F67B5A634C03}|Library.Infrastructure\\Library.Infrastructure.csproj|solutionrelative:library.infrastructure\\entities\\bookentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FC2BD911-DE51-4CAA-A76E-93BEA6F817EB}|Library.Api\\Library.Api.csproj|d:\\personal\\applications\\book-app\\service\\library.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC2BD911-DE51-4CAA-A76E-93BEA6F817EB}|Library.Api\\Library.Api.csproj|solutionrelative:library.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{493D6702-60D8-4DDD-A311-F67B5A634C03}|Library.Infrastructure\\Library.Infrastructure.csproj|d:\\personal\\applications\\book-app\\service\\library.infrastructure\\infrastructureservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{493D6702-60D8-4DDD-A311-F67B5A634C03}|Library.Infrastructure\\Library.Infrastructure.csproj|solutionrelative:library.infrastructure\\infrastructureservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{493D6702-60D8-4DDD-A311-F67B5A634C03}|Library.Infrastructure\\Library.Infrastructure.csproj|d:\\personal\\applications\\book-app\\service\\library.infrastructure\\repository\\interfaces\\ibookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{493D6702-60D8-4DDD-A311-F67B5A634C03}|Library.Infrastructure\\Library.Infrastructure.csproj|solutionrelative:library.infrastructure\\repository\\interfaces\\ibookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{493D6702-60D8-4DDD-A311-F67B5A634C03}|Library.Infrastructure\\Library.Infrastructure.csproj|d:\\personal\\applications\\book-app\\service\\library.infrastructure\\classes\\defaultentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,10 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{493D6702-60D8-4DDD-A311-F67B5A634C03}|Library.Infrastructure\\Library.Infrastructure.csproj|d:\\personal\\applications\\book-app\\service\\library.infrastructure\\classes\\interfaces\\idefaultentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{493D6702-60D8-4DDD-A311-F67B5A634C03}|Library.Infrastructure\\Library.Infrastructure.csproj|solutionrelative:library.infrastructure\\classes\\interfaces\\idefaultentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{493D6702-60D8-4DDD-A311-F67B5A634C03}|Library.Infrastructure\\Library.Infrastructure.csproj|d:\\personal\\applications\\book-app\\service\\library.infrastructure\\infrastructureservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{493D6702-60D8-4DDD-A311-F67B5A634C03}|Library.Infrastructure\\Library.Infrastructure.csproj|solutionrelative:library.infrastructure\\infrastructureservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,24 +38,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Personal\\Applications\\book-app\\service\\Library.Api\\Program.cs",
+              "RelativeDocumentMoniker": "Library.Api\\Program.cs",
+              "ToolTip": "D:\\Personal\\Applications\\book-app\\service\\Library.Api\\Program.cs",
+              "RelativeToolTip": "Library.Api\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-15T07:56:03.756Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "InfrastructureService.cs",
               "DocumentMoniker": "D:\\Personal\\Applications\\book-app\\service\\Library.Infrastructure\\InfrastructureService.cs",
               "RelativeDocumentMoniker": "Library.Infrastructure\\InfrastructureService.cs",
               "ToolTip": "D:\\Personal\\Applications\\book-app\\service\\Library.Infrastructure\\InfrastructureService.cs",
               "RelativeToolTip": "Library.Infrastructure\\InfrastructureService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAuAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-13T15:51:11.255Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "IDefaultEntity.cs",
               "DocumentMoniker": "D:\\Personal\\Applications\\book-app\\service\\Library.Infrastructure\\Classes\\Interfaces\\IDefaultEntity.cs",
               "RelativeDocumentMoniker": "Library.Infrastructure\\Classes\\Interfaces\\IDefaultEntity.cs",
@@ -64,7 +81,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "DefaultEntity.cs",
               "DocumentMoniker": "D:\\Personal\\Applications\\book-app\\service\\Library.Infrastructure\\Classes\\DefaultEntity.cs",
               "RelativeDocumentMoniker": "Library.Infrastructure\\Classes\\DefaultEntity.cs",
@@ -77,13 +94,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "BookEntity.cs",
               "DocumentMoniker": "D:\\Personal\\Applications\\book-app\\service\\Library.Infrastructure\\Entities\\BookEntity.cs",
               "RelativeDocumentMoniker": "Library.Infrastructure\\Entities\\BookEntity.cs",
               "ToolTip": "D:\\Personal\\Applications\\book-app\\service\\Library.Infrastructure\\Entities\\BookEntity.cs",
               "RelativeToolTip": "Library.Infrastructure\\Entities\\BookEntity.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAwAAABCAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwBIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-13T15:30:30.664Z",
               "EditorCaption": ""
@@ -96,20 +113,20 @@
               "RelativeDocumentMoniker": "Library.Infrastructure\\Repository\\BookRepository.cs",
               "ToolTip": "D:\\Personal\\Applications\\book-app\\service\\Library.Infrastructure\\Repository\\BookRepository.cs",
               "RelativeToolTip": "Library.Infrastructure\\Repository\\BookRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAgAAABKAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAoAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-13T15:28:23.697Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "IBookRepository.cs",
               "DocumentMoniker": "D:\\Personal\\Applications\\book-app\\service\\Library.Infrastructure\\Repository\\Interfaces\\IBookRepository.cs",
               "RelativeDocumentMoniker": "Library.Infrastructure\\Repository\\Interfaces\\IBookRepository.cs",
               "ToolTip": "D:\\Personal\\Applications\\book-app\\service\\Library.Infrastructure\\Repository\\Interfaces\\IBookRepository.cs",
               "RelativeToolTip": "Library.Infrastructure\\Repository\\Interfaces\\IBookRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-13T15:27:34.46Z",
               "EditorCaption": ""

@@ -2,6 +2,65 @@
   "version": 3,
   "targets": {
     "net8.0": {
+      "AutoMapper/13.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.7.0",
+          "Microsoft.Extensions.Options": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/AutoMapper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/AutoMapper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "AutoMapper.Collection/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "AutoMapper": "[13.0.0, 14.0.0)"
+        },
+        "compile": {
+          "lib/net6.0/AutoMapper.Collection.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/AutoMapper.Collection.dll": {}
+        }
+      },
+      "AutoMapper.Collection.EntityFrameworkCore/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "AutoMapper.Collection": "[10.0.0, 11.0.0)",
+          "AutoMapper.Extensions.ExpressionMapping": "[7.0.0, 8.0.0)",
+          "Microsoft.EntityFrameworkCore": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/AutoMapper.Collection.EntityFrameworkCore.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/AutoMapper.Collection.EntityFrameworkCore.dll": {}
+        }
+      },
+      "AutoMapper.Extensions.ExpressionMapping/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "AutoMapper": "[13.0.0, 14.0.0)"
+        },
+        "compile": {
+          "lib/net6.0/AutoMapper.Extensions.ExpressionMapping.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/AutoMapper.Extensions.ExpressionMapping.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Azure.Core/1.38.0": {
         "type": "package",
         "dependencies": {
@@ -77,7 +136,7 @@
           }
         }
       },
-      "Microsoft.CSharp/4.5.0": {
+      "Microsoft.CSharp/4.7.0": {
         "type": "package",
         "compile": {
           "ref/netcoreapp2.0/_._": {}
@@ -341,7 +400,7 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
-      "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.0": {
+      "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.1": {
         "type": "package",
         "compile": {
           "lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
@@ -378,10 +437,10 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
-      "Microsoft.Extensions.Logging.Abstractions/8.0.0": {
+      "Microsoft.Extensions.Logging.Abstractions/8.0.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.1"
         },
         "compile": {
           "lib/net8.0/Microsoft.Extensions.Logging.Abstractions.dll": {
@@ -608,6 +667,19 @@
         "runtime": {
           "lib/netstandard2.0/Microsoft.SqlServer.Server.dll": {
             "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Serilog/4.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Serilog.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Serilog.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -941,10 +1013,109 @@
         "runtime": {
           "lib/netcoreapp2.1/_._": {}
         }
+      },
+      "Library.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "AutoMapper.Collection": "10.0.0",
+          "AutoMapper.Collection.EntityFrameworkCore": "10.0.0",
+          "Library.Domain": "1.0.0",
+          "Library.Infrastructure": "1.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.1",
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.1",
+          "Serilog": "4.0.1"
+        },
+        "compile": {
+          "bin/placeholder/Library.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Library.Application.dll": {}
+        }
+      },
+      "Library.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Library.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Library.Domain.dll": {}
+        }
+      },
+      "Library.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.8",
+          "Microsoft.EntityFrameworkCore.Relational": "8.0.8",
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.8"
+        },
+        "compile": {
+          "bin/placeholder/Library.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Library.Infrastructure.dll": {}
+        }
       }
     }
   },
   "libraries": {
+    "AutoMapper/13.0.0": {
+      "sha512": "BFMiZ5kNqbN1ircgFE7qtXWzGjGf1UnEPo39dWlvaPFVep75cikyjFCFssthj9l2ZC4OkeG4vXIgMTApnedSNg==",
+      "type": "package",
+      "path": "automapper/13.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "automapper.13.0.0.nupkg.sha512",
+        "automapper.nuspec",
+        "icon.png",
+        "lib/net6.0/AutoMapper.dll",
+        "lib/net6.0/AutoMapper.xml"
+      ]
+    },
+    "AutoMapper.Collection/10.0.0": {
+      "sha512": "fq7yI+16EExRpjIb8s7SDTqG8ZV+xaAn/u4FWVmK1Z69MXk+04mjcFfXGrui5Wk6674VAyc9RhRf4T3VJdIIng==",
+      "type": "package",
+      "path": "automapper.collection/10.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "automapper.collection.10.0.0.nupkg.sha512",
+        "automapper.collection.nuspec",
+        "icon.png",
+        "lib/net6.0/AutoMapper.Collection.dll"
+      ]
+    },
+    "AutoMapper.Collection.EntityFrameworkCore/10.0.0": {
+      "sha512": "yPgyf+os3IN2kpl6P3KilFySi6t/fRODK6ReiVd7X8b52uFXtWT1+b0A3zeBYwkZx2Dbqm8ei0fDGNe7lqR39w==",
+      "type": "package",
+      "path": "automapper.collection.entityframeworkcore/10.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "automapper.collection.entityframeworkcore.10.0.0.nupkg.sha512",
+        "automapper.collection.entityframeworkcore.nuspec",
+        "icon.png",
+        "lib/net6.0/AutoMapper.Collection.EntityFrameworkCore.dll"
+      ]
+    },
+    "AutoMapper.Extensions.ExpressionMapping/7.0.0": {
+      "sha512": "78Aq0Wh+34ET7qHAzwzQ72ECNeddvEVUpahAHYyMPuLy1j/TLXliVdjyy+ml2HPcleLnehSsddJCtUy8IB20NQ==",
+      "type": "package",
+      "path": "automapper.extensions.expressionmapping/7.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "automapper.extensions.expressionmapping.7.0.0.nupkg.sha512",
+        "automapper.extensions.expressionmapping.nuspec",
+        "icon.png",
+        "lib/net6.0/AutoMapper.Extensions.ExpressionMapping.dll",
+        "lib/net6.0/AutoMapper.Extensions.ExpressionMapping.xml"
+      ]
+    },
     "Azure.Core/1.38.0": {
       "sha512": "IuEgCoVA0ef7E4pQtpC3+TkPbzaoQfa77HlfJDmfuaJUCVJmn7fT0izamZiryW5sYUFKizsftIxMkXKbgIcPMQ==",
       "type": "package",
@@ -1023,10 +1194,10 @@
         "version.txt"
       ]
     },
-    "Microsoft.CSharp/4.5.0": {
-      "sha512": "kaj6Wb4qoMuH3HySFJhxwQfe8R/sJsNJnANrvv8WdFPMoNbKY5htfNscv+LHCu5ipz+49m2e+WQXpLXr9XYemQ==",
+    "Microsoft.CSharp/4.7.0": {
+      "sha512": "pTj+D3uJWyN3My70i2Hqo+OXixq3Os2D1nJ2x92FFo6sk8fYS1m1WLNTs0Dc1uPaViH0YvEEwvzddQ7y4rhXmA==",
       "type": "package",
-      "path": "microsoft.csharp/4.5.0",
+      "path": "microsoft.csharp/4.7.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1039,6 +1210,7 @@
         "lib/netcoreapp2.0/_._",
         "lib/netstandard1.3/Microsoft.CSharp.dll",
         "lib/netstandard2.0/Microsoft.CSharp.dll",
+        "lib/netstandard2.0/Microsoft.CSharp.xml",
         "lib/portable-net45+win8+wp8+wpa81/_._",
         "lib/uap10.0.16299/_._",
         "lib/win8/_._",
@@ -1048,7 +1220,7 @@
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
         "lib/xamarinwatchos10/_._",
-        "microsoft.csharp.4.5.0.nupkg.sha512",
+        "microsoft.csharp.4.7.0.nupkg.sha512",
         "microsoft.csharp.nuspec",
         "ref/MonoAndroid10/_._",
         "ref/MonoTouch10/_._",
@@ -1628,10 +1800,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.0": {
-      "sha512": "cjWrLkJXK0rs4zofsK4bSdg+jhDLTaxrkXu4gS6Y7MAlCvRyNNgwY/lJi5RDlQOnSZweHqoyvgvbdvQsRIW+hg==",
+    "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.1": {
+      "sha512": "fGLiCRLMYd00JYpClraLjJTNKLmMJPnqxMaiRzEBIIvevlzxz33mXy39Lkd48hu1G+N21S7QpaO5ZzKsI6FRuA==",
       "type": "package",
-      "path": "microsoft.extensions.dependencyinjection.abstractions/8.0.0",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/8.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1655,7 +1827,7 @@
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
         "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
         "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
-        "microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.abstractions.8.0.1.nupkg.sha512",
         "microsoft.extensions.dependencyinjection.abstractions.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -1692,10 +1864,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Extensions.Logging.Abstractions/8.0.0": {
-      "sha512": "arDBqTgFCyS0EvRV7O3MZturChstm50OJ0y9bDJvAcmEPJm0FFpFyjU/JLYyStNGGey081DvnQYlncNX5SJJGA==",
+    "Microsoft.Extensions.Logging.Abstractions/8.0.1": {
+      "sha512": "RIFgaqoaINxkM2KTOw72dmilDmTrYA0ns2KW4lDz4gZ2+o6IQ894CzmdL3StM2oh7QQq44nCWiqKqc4qUI9Jmg==",
       "type": "package",
-      "path": "microsoft.extensions.logging.abstractions/8.0.0",
+      "path": "microsoft.extensions.logging.abstractions/8.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1760,7 +1932,7 @@
         "lib/net8.0/Microsoft.Extensions.Logging.Abstractions.xml",
         "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.xml",
-        "microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
+        "microsoft.extensions.logging.abstractions.8.0.1.nupkg.sha512",
         "microsoft.extensions.logging.abstractions.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -2078,6 +2250,29 @@
         "lib/netstandard2.0/Microsoft.SqlServer.Server.xml",
         "microsoft.sqlserver.server.1.0.0.nupkg.sha512",
         "microsoft.sqlserver.server.nuspec"
+      ]
+    },
+    "Serilog/4.0.1": {
+      "sha512": "pzeDRXdpSLSsgBHpZcmpIDxqMy845Ab4s+dfnBg0sN9h8q/4Wo3vAoe0QCGPze1Q06EVtEPupS+UvLm8iXQmTQ==",
+      "type": "package",
+      "path": "serilog/4.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "icon.png",
+        "lib/net462/Serilog.dll",
+        "lib/net462/Serilog.xml",
+        "lib/net471/Serilog.dll",
+        "lib/net471/Serilog.xml",
+        "lib/net6.0/Serilog.dll",
+        "lib/net6.0/Serilog.xml",
+        "lib/net8.0/Serilog.dll",
+        "lib/net8.0/Serilog.xml",
+        "lib/netstandard2.0/Serilog.dll",
+        "lib/netstandard2.0/Serilog.xml",
+        "serilog.4.0.1.nupkg.sha512",
+        "serilog.nuspec"
       ]
     },
     "Swashbuckle.AspNetCore/6.7.3": {
@@ -2810,10 +3005,27 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Library.Application/1.0.0": {
+      "type": "project",
+      "path": "../Library.Application/Library.Application.csproj",
+      "msbuildProject": "../Library.Application/Library.Application.csproj"
+    },
+    "Library.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Library.Domain/Library.Domain.csproj",
+      "msbuildProject": "../Library.Domain/Library.Domain.csproj"
+    },
+    "Library.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../Library.Infrastructure/Library.Infrastructure.csproj",
+      "msbuildProject": "../Library.Infrastructure/Library.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "Library.Application >= 1.0.0",
+      "Library.Infrastructure >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 8.0.4",
       "Microsoft.Data.SqlClient >= 5.2.2",
       "Microsoft.EntityFrameworkCore >= 8.0.8",
@@ -2847,7 +3059,14 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Personal\\Applications\\book-app\\service\\Library.Application\\Library.Application.csproj": {
+              "projectPath": "D:\\Personal\\Applications\\book-app\\service\\Library.Application\\Library.Application.csproj"
+            },
+            "D:\\Personal\\Applications\\book-app\\service\\Library.Infrastructure\\Library.Infrastructure.csproj": {
+              "projectPath": "D:\\Personal\\Applications\\book-app\\service\\Library.Infrastructure\\Library.Infrastructure.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
