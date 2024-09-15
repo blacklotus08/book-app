@@ -1,0 +1,9 @@
+export enum {{{typeName}}} {
+{{#enumValues}}  {{{name}}} = {{{value}}}{{^@last}},
+{{/@last}}{{/enumValues}}
+}
+
+export enum {{{typeName}}}Description {
+{{#enumValues}}  "{{{description}}}" = {{{value}}}{{^@last}},
+{{/@last}}{{/enumValues}}
+}

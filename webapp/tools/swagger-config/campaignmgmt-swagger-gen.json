@@ -1,0 +1,7 @@
+{
+    "$schema": "../../node_modules/ng-openapi-gen/ng-openapi-gen-schema.json",
+    "input": "tools/swagger-files/swagger.json",
+    "output": "libs/data-access/campaignmgmt/src/lib/api",
+    "templates": "tools/swagger-templates",
+    "ignoreUnusedModels": false
+  }
