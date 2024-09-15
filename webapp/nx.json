@@ -1,4 +1,5 @@
 {
+  "defaultProject": "library-app",
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "defaultBase": "master",
   "namedInputs": {
@@ -29,10 +30,23 @@
   },
   "generators": {
     "@nx/angular:application": {
-      "e2eTestRunner": "none",
-      "linter": "eslint",
       "style": "scss",
-      "unitTestRunner": "none"
+      "linter": "eslint",
+      "unitTestRunner": "none",
+      "e2eTestRunner": "none"
+    },
+    "@nx/angular:library": {
+      "linter": "eslint",
+      "unitTestRunner": "jest"
+    },
+    "@nx/angular:component": {
+      "style": "scss",
+      "changeDetection": "OnPush",
+      "skipTests": true,
+      "standalone": false
+    },
+    "@nx/angular:service": {
+      "skipTests": true
     }
   }
 }
