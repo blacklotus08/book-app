@@ -2,6 +2,7 @@ using Microsoft.OpenApi.Models;
 using Library.Infrastructure;
 using Library.Application;
 using System.Reflection;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -39,5 +40,27 @@ if (app.Environment.IsDevelopment())
 
 app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
 app.MapControllers();
+
+// Test the database connection
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    try
+    {
+        // Perform a simple query to test the connection
+        if (await dbContext.Database.CanConnectAsync())
+        {
+            Console.WriteLine("Database connection is successful.");
+        }
+        else
+        {
+            Console.WriteLine("Database connection failed.");
+        }
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"An error occurred while testing the database connection: {ex.Message}");
+    }
+}      
 
 app.Run();
