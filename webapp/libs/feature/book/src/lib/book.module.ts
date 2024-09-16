@@ -6,6 +6,7 @@ import { ButtonModule } from 'primeng/button';
 import { CalendarModule } from 'primeng/calendar';
 import { InputTextModule } from 'primeng/inputtext';
 import { TableModule } from 'primeng/table';
+import { FloatLabelModule } from 'primeng/floatlabel';
 
 import { BookComponent } from './components/book.component';
 import { NewBookComponent } from './components/new-book/new-book.component';
@@ -39,6 +40,7 @@ export const bookRoutes: Route[] = [
     CalendarModule,
     InputTextModule,
     TableModule,
+    FloatLabelModule
   ],
   declarations: [BookComponent, NewBookComponent],
 })

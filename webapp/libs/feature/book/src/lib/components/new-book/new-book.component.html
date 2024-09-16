@@ -1,1 +1,43 @@
-<p>new-book works!</p>
+ <div [formGroup]="form">
+    <div class="col-12">
+        <div class="grid">
+            <div class="col-12 pt-4">
+                <label class="pb-3">{{ !!bookId ? 'Edit' : 'Add'  }} Book</label>
+            </div>
+
+            <div class="col-12 pt-4">
+                <p-floatLabel>
+                    <input id="username" type="text" pInputText formControlName="title" />
+                    <label for="username">Title</label>
+                </p-floatLabel>
+            </div>
+
+            <div class="col-12 pt-4">
+                <p-floatLabel>
+                    <input id="author" type="text" pInputText formControlName="author" />
+                    <label for="author">Author</label>
+                </p-floatLabel>
+            </div>
+
+            <div class="col-12 pt-4">
+                <p-floatLabel>
+                    <input id="isbn" type="text" pInputText formControlName="isbn" />
+                    <label for="isbn">ISBN</label>
+                </p-floatLabel>
+            </div>
+
+            <div class="col-12 pt-4">
+                <p-floatLabel>
+                    <p-calendar id="publishedDate" formControlName="publishedDate" [showIcon]="true"></p-calendar>
+                    <label for="publishedDate">Published Date</label>
+                </p-floatLabel>
+            </div>
+
+            <div class="col-12 d-flex justify-content-center pt-4">
+                <button type="button" pButton class="mr-2" (click)="save()">Save</button>
+                <button type="button" pButton class="p-button-secondary">Cancel</button>
+            </div>
+        </div>
+
+    </div>
+</div>
