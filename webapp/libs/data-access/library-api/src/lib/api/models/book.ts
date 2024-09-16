@@ -3,6 +3,6 @@
 export interface Book {
   author?: string | null;
   isbn?: string | null;
-  publishedDate?: string;
+  publishedDate?: string | null;
   title?: string | null;
 }

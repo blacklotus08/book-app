@@ -1,7 +1,8 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { BookService } from '@webapp/library-api';
+import { MessageService } from 'primeng/api';
 import { take, tap } from 'rxjs';
 
 @Component({
@@ -20,13 +21,14 @@ export class NewBookComponent implements OnInit {
   constructor(
     private fb: FormBuilder, 
     private activatedRoute: ActivatedRoute,
-    private bookService: BookService
+    private bookService: BookService,
+    private messageService: MessageService
   ) {
     this.form = this.fb.group({
       title: new FormControl(null, Validators.required),
       author: new FormControl(null, Validators.required),
       isbn: new FormControl(null, Validators.required),
-      publishedDate: new FormControl(null, Validators.required)
+      publishedDate: new FormControl(null)
     });  
   }
 
@@ -37,7 +39,6 @@ export class NewBookComponent implements OnInit {
           tap((data:any)=>{
             if (!!data) {
               const response = JSON.parse(data);
-              console.log(response);
               const book = response.data;
               if (!!book) {
                 const publishedDate = new Date(book.publishedDate as string);
@@ -53,7 +54,87 @@ export class NewBookComponent implements OnInit {
 
   //#region Public Method
   save() {
-    console.log('save');
+    if (this.form.valid) {
+      const payload = this.form.value;
+      if (this.bookId) {
+        // Update Book
+        this.bookService.apiBookIdPut({ id:this.bookId, body: payload}).pipe(
+          take(1),
+          tap((data:any)=>{
+            if (!!data) {
+              const response = JSON.parse(data);
+              if (response.isSuccess) {
+                this.messageService.add({
+                  severity: 'success',
+                  summary: 'Success',
+                  detail: 'Record successfully updated',
+                  life: 6000,
+                });
+              } else {
+                this.messageService.add({
+                  severity: 'error',
+                  summary: 'Error',
+                  detail: 'Error attempting to add book',
+                  life: 6000,
+                });
+              }
+            }
+          })
+        ).subscribe();
+      } else {
+        // Add New Book
+        this.bookService.apiBookPost({ body: payload}).pipe(
+          take(1),
+          tap((data:any)=>{
+            if (!!data) {
+              const response = JSON.parse(data);
+              if (response.isSuccess) {
+                this.messageService.add({
+                  severity: 'success',
+                  summary: 'Success',
+                  detail: 'Record successfully added',
+                  life: 6000,
+                });
+              } else {
+                this.messageService.add({
+                  severity: 'error',
+                  summary: 'Error',
+                  detail: 'Error attempting to add book',
+                  life: 6000,
+                });
+              }
+            }
+          })
+        ).subscribe();
+      }
+      this.form.markAsPristine();
+    } else {
+      this.validateAllFormFields(this.form);
+      this.messageService.add({
+        severity: 'error',
+        summary: 'Error',
+        detail: 'The form may contain one or more errors. Please check all fields and fix to continue with submission',
+        life: 6000,
+      });
+    }
   }
+
+  validateAllFormFields(formGroup: FormGroup) {
+    Object.keys(formGroup.controls).forEach((field) => {
+      const control = formGroup.get(field);
+      if (control instanceof FormControl) {
+        control.markAsTouched({ onlySelf: true });
+        control.markAsDirty({ onlySelf: true });
+      } else if (control instanceof FormGroup) {
+        this.validateAllFormFields(control);
+      } else if (control instanceof FormArray) {
+        (control as FormArray).controls.forEach((control) => {
+          if (control instanceof FormGroup) {
+            this.validateAllFormFields(control as FormGroup);
+          }
+        });
+      }
+    });
+  }  
   //#endregion
 }

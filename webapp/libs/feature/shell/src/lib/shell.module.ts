@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ShellComponent } from './components/shell.component';
 import { Route, RouterModule } from '@angular/router';
 import { LibraryApiModule } from '@webapp/library-api';
+import { ToastModule } from 'primeng/toast';
 
 export const shellRoutes: Route[] = [
   {
@@ -32,7 +33,8 @@ export const shellRoutes: Route[] = [
   imports: [
     CommonModule,
     RouterModule.forChild(shellRoutes),
-    LibraryApiModule
+    LibraryApiModule,
+    ToastModule
   ],
   declarations: [ShellComponent],
 })

@@ -154,7 +154,8 @@
           },
           "publishedDate": {
             "type": "string",
-            "format": "date"
+            "format": "date",
+            "nullable": true
           }
         },
         "additionalProperties": false
