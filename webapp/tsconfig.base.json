@@ -15,8 +15,11 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@webapp/book": ["library-app/libs/feature/book/src/index.ts"],
-      "@webapp/book-api": ["library-app/libs/data-access/book-api/src/index.ts"]
+      "@webapp/book": ["libs/feature/book/src/index.ts"],
+      "@webapp/book-api": [
+        "library-app/libs/data-access/book-api/src/index.ts"
+      ],
+      "@webapp/shell": ["libs/feature/shell/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
