@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { BehaviorSubject, take, tap } from 'rxjs';
 import { BookService } from '@webapp/library-api';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'lib-book',
@@ -20,10 +21,9 @@ export class BookComponent {
     rows$ = new BehaviorSubject<number>(50);
     //#endregion
   
-    constructor(private bookService: BookService) {
+    constructor(private bookService: BookService, private router: Router) {
       // Load all books
       this.loadBooks();
-
     }
   
     //#region Private Methods
@@ -48,6 +48,13 @@ export class BookComponent {
           }
         })
       ).subscribe();
+    }
+    //#endregion
+
+    //#region Public Methods
+    navigateBookDetails(bookId: string): void {
+      console.log(bookId);
+      window.open(`/book/details?id=${bookId}`, '_blank');
     }
     //#endregion
 }

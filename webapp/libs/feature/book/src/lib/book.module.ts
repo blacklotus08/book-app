@@ -8,23 +8,25 @@ import { InputTextModule } from 'primeng/inputtext';
 import { TableModule } from 'primeng/table';
 
 import { BookComponent } from './components/book.component';
+import { NewBookComponent } from './components/new-book/new-book.component';
 
 export const bookRoutes: Route[] = [
   {
     path: '',
-    component: BookComponent,
-    children: [
-      {
-        path: '',
-        pathMatch: 'full',
-        redirectTo: 'book-listing'
-      },
-      {
-        path: 'book-listing',
-        component: BookComponent,
-      },
-    ]
+    pathMatch: 'full',
+    redirectTo: 'book-listing',
   },
+  {
+    path: 'book-listing',
+    component: BookComponent,
+  },
+  {
+    path: 'new-book',
+    component: NewBookComponent,
+  },
+  { path: 'details', 
+    component: NewBookComponent 
+  }
 ];
 
 @NgModule({
@@ -36,8 +38,8 @@ export const bookRoutes: Route[] = [
     ButtonModule,
     CalendarModule,
     InputTextModule,
-    TableModule
+    TableModule,
   ],
-  declarations: [BookComponent],
+  declarations: [BookComponent, NewBookComponent],
 })
 export class BookModule {}
