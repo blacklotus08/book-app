@@ -24,11 +24,12 @@ export class NewBookComponent implements OnInit {
     private bookService: BookService,
     private messageService: MessageService
   ) {
+    const now = new Date();
     this.form = this.fb.group({
       title: new FormControl(null, Validators.required),
       author: new FormControl(null, Validators.required),
       isbn: new FormControl(null, Validators.required),
-      publishedDate: new FormControl(null)
+      publishedDate: new FormControl(now.toLocaleDateString())
     });  
   }
 
