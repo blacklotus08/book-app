@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, take, tap } from 'rxjs';
+import { BookService } from '@webapp/library-api';
 
 @Component({
   selector: 'lib-book',
@@ -19,7 +20,7 @@ export class BookComponent {
     rows$ = new BehaviorSubject<number>(50);
     //#endregion
   
-    constructor() {
+    constructor(private bookService: BookService) {
       // Load all books
       this.loadBooks();
 
@@ -27,6 +28,26 @@ export class BookComponent {
   
     //#region Private Methods
     private loadBooks() {
+      this.bookService.apiBookGet$Response().pipe(
+        take(1),
+        tap((data:any)=>{
+          if (!!data) {
+            const response = JSON.parse(data.body);
+            const books = response.data?.map((book: any) => ({
+              title: book.title,
+              author: book.author,
+              isbn: book.isbn,
+              publishedDate: book.publishedDate,
+              id: book.id,
+              timestamp: book.tstamp
+            }));
+            if (books.length > 0) {
+              this.campaignListTotalCount$.next(books.length);
+              this.campaignList$.next(books);
+            }
+          }
+        })
+      ).subscribe();
     }
     //#endregion
 }

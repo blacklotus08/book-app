@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ShellComponent } from './components/shell.component';
 import { Route, RouterModule } from '@angular/router';
+import { LibraryApiModule } from '@webapp/library-api';
 
 export const shellRoutes: Route[] = [
   {
@@ -30,7 +31,8 @@ export const shellRoutes: Route[] = [
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forChild(shellRoutes)
+    RouterModule.forChild(shellRoutes),
+    LibraryApiModule
   ],
   declarations: [ShellComponent],
 })
