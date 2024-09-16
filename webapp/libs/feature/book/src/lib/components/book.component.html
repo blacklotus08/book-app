@@ -1,0 +1,24 @@
+<p-table 
+    [value]="(campaignList$ | async) ?? []"
+    [rowHover]="true"
+    [paginator]="true" 
+    [rows]="(rows$ | async) ?? 20" 
+    [showCurrentPageReport]="true" 
+    [(first)]="first"
+    currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+    [totalRecords]="(campaignListTotalCount$ | async) ?? 0" 
+    [rowsPerPageOptions]="[10,25,50]"
+    [scrollable]="true"
+    scrollHeight="70vh"  
+>
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>ISBN</th>
+      <th>Published Date</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-campaign>
+  </ng-template>
+</p-table>

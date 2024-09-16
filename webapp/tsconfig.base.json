@@ -16,9 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@webapp/book": ["libs/feature/book/src/index.ts"],
-      "@webapp/book-api": [
-        "library-app/libs/data-access/book-api/src/index.ts"
-      ],
+      "@webapp/library-api": ["libs/data-access/library-api/src/index.ts"],
       "@webapp/shell": ["libs/feature/shell/src/index.ts"]
     }
   },
