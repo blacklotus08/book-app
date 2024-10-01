@@ -37,7 +37,7 @@ namespace Library.Application.BusinessLogic
 
         }
 
-        public async Task<ResponsePayload<BookViewModel>> DeleteBook(Guid id)
+        public async Task<ResponsePayload<BookViewModel>> DeleteBook(int id)
         {
             BookEntity? bookEntity = await _bookRepository.Get(id);
 
@@ -77,7 +77,7 @@ namespace Library.Application.BusinessLogic
             };
         }
 
-        public async Task<ResponsePayload<BookViewModel>> GetBook(Guid id)
+        public async Task<ResponsePayload<BookViewModel>> GetBook(int id)
         {
             BookEntity? bookEntity = await _bookRepository.Get(id);
 
@@ -103,7 +103,7 @@ namespace Library.Application.BusinessLogic
             };
         }
 
-        public async Task<ResponsePayload<BookViewModel>> UpdateBook(Guid id, Book payload)
+        public async Task<ResponsePayload<BookViewModel>> UpdateBook(int id, Book payload)
         {
             BookEntity? bookEntity = await _bookRepository.Get(id);
 

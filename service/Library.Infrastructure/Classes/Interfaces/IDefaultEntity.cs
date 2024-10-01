@@ -2,7 +2,7 @@
 {
     public interface IDefaultEntity
     {
-        Guid Id { get; set; }
+        int Id { get; set; }
 
         DateTime tstamp { get; set; }
     }

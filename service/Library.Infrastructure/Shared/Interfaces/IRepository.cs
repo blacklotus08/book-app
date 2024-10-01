@@ -9,8 +9,8 @@ namespace Library.Infrastructure.Shared.Interfaces
         Task CommitTransaction(IDbContextTransaction transaction);
         Task RollbackTransaction(IDbContextTransaction transaction);
 
-        Task<T?> Get(Guid id);
-        Task<T?> GetNoTracking(Guid id);
+        Task<T?> Get(int id);
+        Task<T?> GetNoTracking(int id);
         Task<List<T>> GetAll();
         Task Insert(T entity);
         void Update(T entity);

@@ -30,7 +30,7 @@ namespace Library.Api.Controllers
         /// </summary>
         /// <returns>Retrieve a specific book by its ID.</returns>
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get(Guid id)
+        public async Task<IActionResult> Get(int id)
         {
             return Ok(await _bookManagement.GetBook(id));
         }
@@ -50,7 +50,7 @@ namespace Library.Api.Controllers
         /// </summary>
         /// <returns>Update an existing book by its ID.</returns>
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(Guid id, [FromBody] Book model)
+        public async Task<IActionResult> Update(int id, [FromBody] Book model)
         {
             return Ok(await _bookManagement.UpdateBook(id, model));
         }
@@ -60,7 +60,7 @@ namespace Library.Api.Controllers
         /// </summary>
         /// <returns>Soft delete an existing book by its ID.</returns>
         [HttpDelete]
-        public async Task<IActionResult> Destroy(Guid id)
+        public async Task<IActionResult> Destroy(int id)
         {
             return Ok(await _bookManagement.DeleteBook(id));
         }

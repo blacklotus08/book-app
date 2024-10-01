@@ -27,11 +27,11 @@ namespace Library.Infrastructure.Shared
         {
             await transaction.RollbackAsync();
         }
-        public virtual async Task<T?> Get(Guid id)
+        public virtual async Task<T?> Get(int id)
         {
             return await _context.Set<T>().Where(entity => entity.Id == id &&  !entity.DeletedDateTimeUtc.HasValue).SingleOrDefaultAsync();
         }
-        public virtual async Task<T?> GetNoTracking(Guid id)
+        public virtual async Task<T?> GetNoTracking(int id)
         {
             return await _context.Set<T>().AsNoTracking().Where(entity => entity.Id == id && !entity.DeletedDateTimeUtc.HasValue).SingleOrDefaultAsync();
         }

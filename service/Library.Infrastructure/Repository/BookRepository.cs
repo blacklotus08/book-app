@@ -13,7 +13,7 @@ namespace Library.Infrastructure.Repository
 
         }
 
-        public override async Task<BookEntity?> Get(Guid id)
+        public override async Task<BookEntity?> Get(int id)
         {
             return await _context.Set<BookEntity>().Where(entity => entity.Id == id && !entity.DeletedDateTimeUtc.HasValue).SingleOrDefaultAsync();
         }
