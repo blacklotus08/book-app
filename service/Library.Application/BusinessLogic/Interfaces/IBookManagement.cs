@@ -9,7 +9,7 @@ namespace Library.Application.BusinessLogic.Interfaces
         Task<ResponsePayload<List<BookViewModel>>> GetAllBooks();
         Task<ResponsePayload<BookViewModel>> GetBook(int id);
         Task<ResponsePayload<BookViewModel>> CreateBook(Book payload);
-        Task<ResponsePayload<BookViewModel>> UpdateBook(int id, Book payload);
+        Task<ResponsePayload<BookViewModel>> UpdateBook(BookWithId payload);
         Task<ResponsePayload<BookViewModel>> DeleteBook(int id);
     }
 }

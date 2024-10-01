@@ -103,9 +103,9 @@ namespace Library.Application.BusinessLogic
             };
         }
 
-        public async Task<ResponsePayload<BookViewModel>> UpdateBook(int id, Book payload)
+        public async Task<ResponsePayload<BookViewModel>> UpdateBook(BookWithId payload)
         {
-            BookEntity? bookEntity = await _bookRepository.Get(id);
+            BookEntity? bookEntity = await _bookRepository.Get(payload.Id);
 
             if (bookEntity == null)
             {

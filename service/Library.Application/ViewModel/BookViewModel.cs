@@ -4,5 +4,6 @@ namespace Library.Application.ViewModel
 {
     public class BookViewModel: BookEntity
     {
+        
     }
 }

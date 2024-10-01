@@ -22,7 +22,7 @@
             </summary>
             <returns>Add a new book to the library.</returns>
         </member>
-        <member name="M:Library.Api.Controllers.BookController.Update(System.Int32,Library.Application.PayloadModel.Book)">
+        <member name="M:Library.Api.Controllers.BookController.Update(Library.Application.PayloadModel.BookWithId)">
             <summary>
             Update a book
             </summary>

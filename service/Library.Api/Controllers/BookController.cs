@@ -50,9 +50,9 @@ namespace Library.Api.Controllers
         /// </summary>
         /// <returns>Update an existing book by its ID.</returns>
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, [FromBody] Book model)
+        public async Task<IActionResult> Update([FromBody] BookWithId model)
         {
-            return Ok(await _bookManagement.UpdateBook(id, model));
+            return Ok(await _bookManagement.UpdateBook(model));
         }
 
         /// <summary>
