@@ -2,12 +2,17 @@ using Microsoft.OpenApi.Models;
 using Library.Infrastructure;
 using Library.Application;
 using System.Reflection;
-using Microsoft.EntityFrameworkCore;
+using Library.Api.CustomAuth;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Inject Infrastructure
 builder.Services.AddInfrastuctureService(builder.Configuration);
+
+// Set the API key for authorization
+var apiKey = builder.Configuration.GetValue<string>("AppSettings:JWTSecret");
+if (apiKey != null)
+    AuthorizeAttribute.SetApiKey(apiKey); // Store API Key
 
 // Inject Application
 builder.Services.AddApplicationService();
@@ -28,6 +33,20 @@ builder.Services.AddSwaggerGen(c =>
     var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
     var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
     c.IncludeXmlComments(xmlPath);  // Include the XML comments in Swagger
+
+        // Configure API key authentication in Swagger
+    c.AddSecurityDefinition("ApiKey", new OpenApiSecurityScheme
+    {
+        Name = "X-Api-Token",  // The name of the header
+        In = ParameterLocation.Header,
+        Type = SecuritySchemeType.ApiKey,
+        Description = "API token needed to access the endpoints"
+    });
+
+    c.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        { new OpenApiSecurityScheme { Reference = new OpenApiReference { Type = ReferenceType.SecurityScheme, Id = "ApiKey" } }, new string[] { } }
+    });
 });
 
 var app = builder.Build();
@@ -40,6 +59,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
+app.UseMiddleware<JwtMiddleware>();
 app.MapControllers();
 
 // Test the database connection
@@ -62,6 +82,6 @@ using (var scope = app.Services.CreateScope())
     {
         Console.WriteLine($"An error occurred while testing the database connection: {ex.Message}");
     }
-}      
+}
 
 app.Run();

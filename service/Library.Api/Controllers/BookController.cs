@@ -1,15 +1,16 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Library.Application.BusinessLogic.Interfaces;
 using Library.Application.PayloadModel;
+using Library.Api.CustomAuth;
 
 namespace Library.Api.Controllers
 {
     [Route("book")]
+    [Authorize]
     [ApiController]
     public class BookController : ControllerBase
     {
         private readonly IBookManagement _bookManagement;
-
         public BookController(IBookManagement bookManagement)
         {
             _bookManagement = bookManagement;
