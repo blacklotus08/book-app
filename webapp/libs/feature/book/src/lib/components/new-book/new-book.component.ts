@@ -102,30 +102,6 @@ export class NewBookComponent implements OnInit {
             }
           })
         ).subscribe();
-
-        // this.bookService.bookIdPut({ id:this.bookId.toString(), body: payload}).pipe(
-        //   take(1),
-        //   tap((data:any)=>{
-        //     if (!!data) {
-        //       const response = JSON.parse(data);
-              // if (response.isSuccess) {
-              //   this.messageService.add({
-              //     severity: 'success',
-              //     summary: 'Success',
-              //     detail: 'Record successfully updated',
-              //     life: 6000,
-              //   });
-              // } else {
-              //   this.messageService.add({
-              //     severity: 'error',
-              //     summary: 'Error',
-              //     detail: 'Error attempting to add book',
-              //     life: 6000,
-              //   });
-              // }
-        //     }
-        //   })
-        // ).subscribe();
       } else {
         // Add New Book
         const getUrl = `book`;
