@@ -6,13 +6,16 @@ import { filter, map } from 'rxjs/operators';
 import { StrictHttpResponse } from '../../strict-http-response';
 import { RequestBuilder } from '../../request-builder';
 
+import { Book } from '../../models/book';
 
-export interface ApiBookGet$Params {
+export interface BookPost$Params {
+      body?: Book
 }
 
-export function apiBookGet(http: HttpClient, rootUrl: string, params?: ApiBookGet$Params, context?: HttpContext): Observable<StrictHttpResponse<void>> {
-  const rb = new RequestBuilder(rootUrl, apiBookGet.PATH, 'get');
+export function bookPost(http: HttpClient, rootUrl: string, params?: BookPost$Params, context?: HttpContext): Observable<StrictHttpResponse<void>> {
+  const rb = new RequestBuilder(rootUrl, bookPost.PATH, 'post');
   if (params) {
+    rb.body(params.body, 'application/*+json');
   }
 
   return http.request(
@@ -25,4 +28,4 @@ export function apiBookGet(http: HttpClient, rootUrl: string, params?: ApiBookGe
   );
 }
 
-apiBookGet.PATH = '/api/Book';
+bookPost.PATH = '/book';

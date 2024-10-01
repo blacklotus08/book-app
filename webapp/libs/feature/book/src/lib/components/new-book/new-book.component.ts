@@ -1,7 +1,8 @@
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
-import { BookService } from '@webapp/library-api';
+import { Book, BookService, BookWithId } from '@webapp/library-api';
 import { MessageService } from 'primeng/api';
 import { take, tap } from 'rxjs';
 
@@ -14,15 +15,20 @@ import { take, tap } from 'rxjs';
 export class NewBookComponent implements OnInit {
   form!: FormGroup;
 
-  get bookId(): string {
+  get bookId(): number {
     return this.activatedRoute.snapshot.queryParams['id'] ?? null;
+  }
+
+  get headers(): HttpHeaders {
+    return new HttpHeaders().set('X-Api-Token', '193653a3-7965-4f0b-9d98-8420ea03851e');
   }
 
   constructor(
     private fb: FormBuilder, 
     private activatedRoute: ActivatedRoute,
     private bookService: BookService,
-    private messageService: MessageService
+    private messageService: MessageService,
+    private httpClient: HttpClient
   ) {
     const now = new Date();
     this.form = this.fb.group({
@@ -35,12 +41,17 @@ export class NewBookComponent implements OnInit {
 
   ngOnInit(): void {
       if (!!this.bookId) {
-        this.bookService.apiBookIdGet({ id : this.bookId}).pipe(
+        const getUrl = `book/${this.bookId}`;
+        this.httpClient
+        .get(this.bookService.rootUrl + getUrl, {
+          headers : this.headers,
+          observe: 'body',
+          responseType: 'json',
+        }).pipe(  
           take(1),
           tap((data:any)=>{
             if (!!data) {
-              const response = JSON.parse(data);
-              const book = response.data;
+              const book = data?.data;
               if (!!book) {
                 const publishedDate = new Date(book.publishedDate as string);
                 this.form.patchValue(book);
@@ -56,14 +67,23 @@ export class NewBookComponent implements OnInit {
   //#region Public Method
   save() {
     if (this.form.valid) {
-      const payload = this.form.value;
+      const payload = {
+        ...this.form.value,
+        id: this.bookId,
+        publishedDate: new Date(this.form.get('publishedDate')?.value)
+      } as BookWithId;
       if (this.bookId) {
         // Update Book
-        this.bookService.apiBookIdPut({ id:this.bookId, body: payload}).pipe(
+        const getUrl = `book/${this.bookId}`;
+        this.httpClient
+        .put(this.bookService.rootUrl + getUrl, payload, {
+          headers : this.headers,
+          observe: 'body',
+          responseType: 'json',
+        }).pipe(  
           take(1),
-          tap((data:any)=>{
-            if (!!data) {
-              const response = JSON.parse(data);
+          tap((response:any)=>{
+            if (!!response) {
               if (response.isSuccess) {
                 this.messageService.add({
                   severity: 'success',
@@ -82,13 +102,42 @@ export class NewBookComponent implements OnInit {
             }
           })
         ).subscribe();
+
+        // this.bookService.bookIdPut({ id:this.bookId.toString(), body: payload}).pipe(
+        //   take(1),
+        //   tap((data:any)=>{
+        //     if (!!data) {
+        //       const response = JSON.parse(data);
+              // if (response.isSuccess) {
+              //   this.messageService.add({
+              //     severity: 'success',
+              //     summary: 'Success',
+              //     detail: 'Record successfully updated',
+              //     life: 6000,
+              //   });
+              // } else {
+              //   this.messageService.add({
+              //     severity: 'error',
+              //     summary: 'Error',
+              //     detail: 'Error attempting to add book',
+              //     life: 6000,
+              //   });
+              // }
+        //     }
+        //   })
+        // ).subscribe();
       } else {
         // Add New Book
-        this.bookService.apiBookPost({ body: payload}).pipe(
+        const getUrl = `book`;
+        this.httpClient
+        .post(this.bookService.rootUrl + getUrl, payload, {
+          headers : this.headers,
+          observe: 'body',
+          responseType: 'json',
+        }).pipe(  
           take(1),
-          tap((data:any)=>{
-            if (!!data) {
-              const response = JSON.parse(data);
+          tap((response:any)=>{
+            if (!!response) {
               if (response.isSuccess) {
                 this.messageService.add({
                   severity: 'success',

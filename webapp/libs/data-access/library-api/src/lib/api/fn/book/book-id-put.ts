@@ -6,15 +6,15 @@ import { filter, map } from 'rxjs/operators';
 import { StrictHttpResponse } from '../../strict-http-response';
 import { RequestBuilder } from '../../request-builder';
 
-import { Book } from '../../models/book';
+import { BookWithId } from '../../models/book-with-id';
 
-export interface ApiBookIdPut$Params {
+export interface BookIdPut$Params {
   id: string;
-      body?: Book
+      body?: BookWithId
 }
 
-export function apiBookIdPut(http: HttpClient, rootUrl: string, params: ApiBookIdPut$Params, context?: HttpContext): Observable<StrictHttpResponse<void>> {
-  const rb = new RequestBuilder(rootUrl, apiBookIdPut.PATH, 'put');
+export function bookIdPut(http: HttpClient, rootUrl: string, params: BookIdPut$Params, context?: HttpContext): Observable<StrictHttpResponse<void>> {
+  const rb = new RequestBuilder(rootUrl, bookIdPut.PATH, 'put');
   if (params) {
     rb.path('id', params.id, {});
     rb.body(params.body, 'application/*+json');
@@ -30,4 +30,4 @@ export function apiBookIdPut(http: HttpClient, rootUrl: string, params: ApiBookI
   );
 }
 
-apiBookIdPut.PATH = '/api/Book/{id}';
+bookIdPut.PATH = '/book/{id}';

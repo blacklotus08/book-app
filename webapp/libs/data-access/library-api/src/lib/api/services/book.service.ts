@@ -9,16 +9,16 @@ import { BaseService } from '../base-service';
 import { ApiConfiguration } from '../api-configuration';
 import { StrictHttpResponse } from '../strict-http-response';
 
-import { apiBookDelete } from '../fn/book/api-book-delete';
-import { ApiBookDelete$Params } from '../fn/book/api-book-delete';
-import { apiBookGet } from '../fn/book/api-book-get';
-import { ApiBookGet$Params } from '../fn/book/api-book-get';
-import { apiBookIdGet } from '../fn/book/api-book-id-get';
-import { ApiBookIdGet$Params } from '../fn/book/api-book-id-get';
-import { apiBookIdPut } from '../fn/book/api-book-id-put';
-import { ApiBookIdPut$Params } from '../fn/book/api-book-id-put';
-import { apiBookPost } from '../fn/book/api-book-post';
-import { ApiBookPost$Params } from '../fn/book/api-book-post';
+import { bookDelete } from '../fn/book/book-delete';
+import { BookDelete$Params } from '../fn/book/book-delete';
+import { bookIdGet } from '../fn/book/book-id-get';
+import { BookIdGet$Params } from '../fn/book/book-id-get';
+import { bookIdPut } from '../fn/book/book-id-put';
+import { BookIdPut$Params } from '../fn/book/book-id-put';
+import { bookPost } from '../fn/book/book-post';
+import { BookPost$Params } from '../fn/book/book-post';
+import { booksGet } from '../fn/book/books-get';
+import { BooksGet$Params } from '../fn/book/books-get';
 
 @Injectable({ providedIn: 'root' })
 export class BookService extends BaseService {
@@ -26,8 +26,8 @@ export class BookService extends BaseService {
     super(config, http);
   }
 
-  /** Path part for operation `apiBookGet()` */
-  static readonly ApiBookGetPath = '/api/Book';
+  /** Path part for operation `booksGet()` */
+  static readonly BooksGetPath = '/books';
 
   /**
    * Get all books.
@@ -35,12 +35,12 @@ export class BookService extends BaseService {
    *
    *
    * This method provides access to the full `HttpResponse`, allowing access to response headers.
-   * To access only the response body, use `apiBookGet()` instead.
+   * To access only the response body, use `booksGet()` instead.
    *
    * This method doesn't expect any request body.
    */
-  apiBookGet$Response(params?: ApiBookGet$Params, context?: HttpContext): Observable<StrictHttpResponse<void>> {
-    return apiBookGet(this.http, this.rootUrl, params, context);
+  booksGet$Response(params?: BooksGet$Params, context?: HttpContext): Observable<StrictHttpResponse<void>> {
+    return booksGet(this.http, this.rootUrl, params, context);
   }
 
   /**
@@ -49,84 +49,18 @@ export class BookService extends BaseService {
    *
    *
    * This method provides access only to the response body.
-   * To access the full response (for headers, for example), `apiBookGet$Response()` instead.
+   * To access the full response (for headers, for example), `booksGet$Response()` instead.
    *
    * This method doesn't expect any request body.
    */
-  apiBookGet(params?: ApiBookGet$Params, context?: HttpContext): Observable<void> {
-    return this.apiBookGet$Response(params, context).pipe(
+  booksGet(params?: BooksGet$Params, context?: HttpContext): Observable<void> {
+    return this.booksGet$Response(params, context).pipe(
       map((r: StrictHttpResponse<void>): void => r.body)
     );
   }
 
-  /** Path part for operation `apiBookPost()` */
-  static readonly ApiBookPostPath = '/api/Book';
-
-  /**
-   * Add a new book.
-   *
-   *
-   *
-   * This method provides access to the full `HttpResponse`, allowing access to response headers.
-   * To access only the response body, use `apiBookPost()` instead.
-   *
-   * This method sends `application/*+json` and handles request body of type `application/*+json`.
-   */
-  apiBookPost$Response(params?: ApiBookPost$Params, context?: HttpContext): Observable<StrictHttpResponse<void>> {
-    return apiBookPost(this.http, this.rootUrl, params, context);
-  }
-
-  /**
-   * Add a new book.
-   *
-   *
-   *
-   * This method provides access only to the response body.
-   * To access the full response (for headers, for example), `apiBookPost$Response()` instead.
-   *
-   * This method sends `application/*+json` and handles request body of type `application/*+json`.
-   */
-  apiBookPost(params?: ApiBookPost$Params, context?: HttpContext): Observable<void> {
-    return this.apiBookPost$Response(params, context).pipe(
-      map((r: StrictHttpResponse<void>): void => r.body)
-    );
-  }
-
-  /** Path part for operation `apiBookDelete()` */
-  static readonly ApiBookDeletePath = '/api/Book';
-
-  /**
-   * Soft delete a book.
-   *
-   *
-   *
-   * This method provides access to the full `HttpResponse`, allowing access to response headers.
-   * To access only the response body, use `apiBookDelete()` instead.
-   *
-   * This method doesn't expect any request body.
-   */
-  apiBookDelete$Response(params?: ApiBookDelete$Params, context?: HttpContext): Observable<StrictHttpResponse<void>> {
-    return apiBookDelete(this.http, this.rootUrl, params, context);
-  }
-
-  /**
-   * Soft delete a book.
-   *
-   *
-   *
-   * This method provides access only to the response body.
-   * To access the full response (for headers, for example), `apiBookDelete$Response()` instead.
-   *
-   * This method doesn't expect any request body.
-   */
-  apiBookDelete(params?: ApiBookDelete$Params, context?: HttpContext): Observable<void> {
-    return this.apiBookDelete$Response(params, context).pipe(
-      map((r: StrictHttpResponse<void>): void => r.body)
-    );
-  }
-
-  /** Path part for operation `apiBookIdGet()` */
-  static readonly ApiBookIdGetPath = '/api/Book/{id}';
+  /** Path part for operation `bookIdGet()` */
+  static readonly BookIdGetPath = '/book/{id}';
 
   /**
    * Get a specific book.
@@ -134,12 +68,12 @@ export class BookService extends BaseService {
    *
    *
    * This method provides access to the full `HttpResponse`, allowing access to response headers.
-   * To access only the response body, use `apiBookIdGet()` instead.
+   * To access only the response body, use `bookIdGet()` instead.
    *
    * This method doesn't expect any request body.
    */
-  apiBookIdGet$Response(params: ApiBookIdGet$Params, context?: HttpContext): Observable<StrictHttpResponse<void>> {
-    return apiBookIdGet(this.http, this.rootUrl, params, context);
+  bookIdGet$Response(params: BookIdGet$Params, context?: HttpContext): Observable<StrictHttpResponse<void>> {
+    return bookIdGet(this.http, this.rootUrl, params, context);
   }
 
   /**
@@ -148,18 +82,18 @@ export class BookService extends BaseService {
    *
    *
    * This method provides access only to the response body.
-   * To access the full response (for headers, for example), `apiBookIdGet$Response()` instead.
+   * To access the full response (for headers, for example), `bookIdGet$Response()` instead.
    *
    * This method doesn't expect any request body.
    */
-  apiBookIdGet(params: ApiBookIdGet$Params, context?: HttpContext): Observable<void> {
-    return this.apiBookIdGet$Response(params, context).pipe(
+  bookIdGet(params: BookIdGet$Params, context?: HttpContext): Observable<void> {
+    return this.bookIdGet$Response(params, context).pipe(
       map((r: StrictHttpResponse<void>): void => r.body)
     );
   }
 
-  /** Path part for operation `apiBookIdPut()` */
-  static readonly ApiBookIdPutPath = '/api/Book/{id}';
+  /** Path part for operation `bookIdPut()` */
+  static readonly BookIdPutPath = '/book/{id}';
 
   /**
    * Update a book.
@@ -167,12 +101,12 @@ export class BookService extends BaseService {
    *
    *
    * This method provides access to the full `HttpResponse`, allowing access to response headers.
-   * To access only the response body, use `apiBookIdPut()` instead.
+   * To access only the response body, use `bookIdPut()` instead.
    *
    * This method sends `application/*+json` and handles request body of type `application/*+json`.
    */
-  apiBookIdPut$Response(params: ApiBookIdPut$Params, context?: HttpContext): Observable<StrictHttpResponse<void>> {
-    return apiBookIdPut(this.http, this.rootUrl, params, context);
+  bookIdPut$Response(params: BookIdPut$Params, context?: HttpContext): Observable<StrictHttpResponse<void>> {
+    return bookIdPut(this.http, this.rootUrl, params, context);
   }
 
   /**
@@ -181,12 +115,78 @@ export class BookService extends BaseService {
    *
    *
    * This method provides access only to the response body.
-   * To access the full response (for headers, for example), `apiBookIdPut$Response()` instead.
+   * To access the full response (for headers, for example), `bookIdPut$Response()` instead.
    *
    * This method sends `application/*+json` and handles request body of type `application/*+json`.
    */
-  apiBookIdPut(params: ApiBookIdPut$Params, context?: HttpContext): Observable<void> {
-    return this.apiBookIdPut$Response(params, context).pipe(
+  bookIdPut(params: BookIdPut$Params, context?: HttpContext): Observable<void> {
+    return this.bookIdPut$Response(params, context).pipe(
+      map((r: StrictHttpResponse<void>): void => r.body)
+    );
+  }
+
+  /** Path part for operation `bookPost()` */
+  static readonly BookPostPath = '/book';
+
+  /**
+   * Add a new book.
+   *
+   *
+   *
+   * This method provides access to the full `HttpResponse`, allowing access to response headers.
+   * To access only the response body, use `bookPost()` instead.
+   *
+   * This method sends `application/*+json` and handles request body of type `application/*+json`.
+   */
+  bookPost$Response(params?: BookPost$Params, context?: HttpContext): Observable<StrictHttpResponse<void>> {
+    return bookPost(this.http, this.rootUrl, params, context);
+  }
+
+  /**
+   * Add a new book.
+   *
+   *
+   *
+   * This method provides access only to the response body.
+   * To access the full response (for headers, for example), `bookPost$Response()` instead.
+   *
+   * This method sends `application/*+json` and handles request body of type `application/*+json`.
+   */
+  bookPost(params?: BookPost$Params, context?: HttpContext): Observable<void> {
+    return this.bookPost$Response(params, context).pipe(
+      map((r: StrictHttpResponse<void>): void => r.body)
+    );
+  }
+
+  /** Path part for operation `bookDelete()` */
+  static readonly BookDeletePath = '/book';
+
+  /**
+   * Soft delete a book.
+   *
+   *
+   *
+   * This method provides access to the full `HttpResponse`, allowing access to response headers.
+   * To access only the response body, use `bookDelete()` instead.
+   *
+   * This method doesn't expect any request body.
+   */
+  bookDelete$Response(params?: BookDelete$Params, context?: HttpContext): Observable<StrictHttpResponse<void>> {
+    return bookDelete(this.http, this.rootUrl, params, context);
+  }
+
+  /**
+   * Soft delete a book.
+   *
+   *
+   *
+   * This method provides access only to the response body.
+   * To access the full response (for headers, for example), `bookDelete$Response()` instead.
+   *
+   * This method doesn't expect any request body.
+   */
+  bookDelete(params?: BookDelete$Params, context?: HttpContext): Observable<void> {
+    return this.bookDelete$Response(params, context).pipe(
       map((r: StrictHttpResponse<void>): void => r.body)
     );
   }

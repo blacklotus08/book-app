@@ -7,14 +7,14 @@ import { StrictHttpResponse } from '../../strict-http-response';
 import { RequestBuilder } from '../../request-builder';
 
 
-export interface ApiBookDelete$Params {
-  id?: string;
+export interface BookIdGet$Params {
+  id: number;
 }
 
-export function apiBookDelete(http: HttpClient, rootUrl: string, params?: ApiBookDelete$Params, context?: HttpContext): Observable<StrictHttpResponse<void>> {
-  const rb = new RequestBuilder(rootUrl, apiBookDelete.PATH, 'delete');
+export function bookIdGet(http: HttpClient, rootUrl: string, params: BookIdGet$Params, context?: HttpContext): Observable<StrictHttpResponse<void>> {
+  const rb = new RequestBuilder(rootUrl, bookIdGet.PATH, 'get');
   if (params) {
-    rb.query('id', params.id, {});
+    rb.path('id', params.id, {});
   }
 
   return http.request(
@@ -27,4 +27,4 @@ export function apiBookDelete(http: HttpClient, rootUrl: string, params?: ApiBoo
   );
 }
 
-apiBookDelete.PATH = '/api/Book';
+bookIdGet.PATH = '/book/{id}';

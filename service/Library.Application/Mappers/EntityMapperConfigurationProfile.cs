@@ -10,6 +10,8 @@ namespace Library.Application.Mappers
         public EntityMapperConfigurationProfile()
         {
             CreateMap<Book, BookEntity>();
+
+            CreateMap<BookWithId, BookEntity>();
         }
     }
 }

@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { BehaviorSubject, take, tap } from 'rxjs';
 import { BookService } from '@webapp/library-api';
 import { Router } from '@angular/router';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'lib-book',
@@ -19,31 +20,34 @@ export class BookComponent {
     campaignList$  = new BehaviorSubject<any[]>([]);
     campaignListTotalCount$ = new BehaviorSubject<number>(0);
     rows$ = new BehaviorSubject<number>(50);
+    headers = new HttpHeaders();
     //#endregion
   
-    constructor(private bookService: BookService, private router: Router) {
+    constructor(private bookService: BookService, private router: Router, private httpClient : HttpClient) {
       // Load all books
       this.loadBooks();
     }
   
     //#region Private Methods
     private loadBooks() {
-      this.bookService.apiBookGet$Response().pipe(
+      // Create params object to include headers
+      const apiKey = '193653a3-7965-4f0b-9d98-8420ea03851e';
+      const headers = new HttpHeaders().set('X-Api-Token', apiKey);
+      const getUrl = 'books';
+
+      this.httpClient
+      .get(this.bookService.rootUrl + getUrl, {
+        headers,
+        observe: 'body',
+        responseType: 'json',
+      }).pipe(  
         take(1),
         tap((data:any)=>{
           if (!!data) {
-            const response = JSON.parse(data.body);
-            const books = response.data?.map((book: any) => ({
-              title: book.title,
-              author: book.author,
-              isbn: book.isbn,
-              publishedDate: book.publishedDate,
-              id: book.id,
-              timestamp: book.tstamp
-            }));
+            const books = data?.data;
             if (books.length > 0) {
-              this.campaignListTotalCount$.next(books.length);
-              this.campaignList$.next(books);
+              this.campaignListTotalCount$.next(data?.data.length);
+              this.campaignList$.next(data?.data);
             }
           }
         })
