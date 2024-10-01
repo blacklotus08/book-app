@@ -4,7 +4,7 @@ using Library.Application.PayloadModel;
 
 namespace Library.Api.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("book")]
     [ApiController]
     public class BookController : ControllerBase
     {
@@ -19,7 +19,7 @@ namespace Library.Api.Controllers
         /// Get all books
         /// </summary>
         /// <returns>Retrieve a list of all books in the library.</returns>
-        [HttpGet]
+        [HttpGet("/books")] 
         public async Task<IActionResult> Get()
         {
             return Ok(await _bookManagement.GetAllBooks());
